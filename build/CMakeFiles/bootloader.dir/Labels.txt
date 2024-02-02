@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/tux/projects/tautuk_esp32s3_core/build/CMakeFiles/bootloader
+/home/tux/projects/tautuk_esp32s3_core/build/CMakeFiles/bootloader.rule
+/home/tux/projects/tautuk_esp32s3_core/build/CMakeFiles/bootloader-complete.rule
+/home/tux/projects/tautuk_esp32s3_core/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/tux/projects/tautuk_esp32s3_core/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/tux/projects/tautuk_esp32s3_core/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/tux/projects/tautuk_esp32s3_core/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/tux/projects/tautuk_esp32s3_core/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/tux/projects/tautuk_esp32s3_core/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/tux/projects/tautuk_esp32s3_core/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

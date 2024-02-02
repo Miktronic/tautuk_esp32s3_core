@@ -1,0 +1,17 @@
+[0;33m--- esp-idf-monitor 1.3.4 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x4037526c: call_start_cpu1 at /home/tux/esp/v5.1.2/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x4200c2d2: task_wdt_timeout_handling at /home/tux/esp/v5.1.2/esp-idf/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x4200c47e: task_wdt_isr at /home/tux/esp/v5.1.2/esp-idf/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40376d11: _xt_lowint1 at /home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1240
+[0m
+[0;33m0x42008b51: app_main at /home/tux/projects/tautuk_esp32s3_core/main/main.c:176 (discriminator 6)
+[0m
+[0;33m0x4201c263: main_task at /home/tux/esp/v5.1.2/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4037bed1: vPortTaskWrapper at /home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0m

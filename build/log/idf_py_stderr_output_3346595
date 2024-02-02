@@ -1,0 +1,12 @@
+Compiler supported targets: xtensa-esp32s3-elf
+
+CMake Error at /home/tux/esp/v5.1.2/esp-idf/tools/cmake/component.cmake:479 (add_library):
+  add_library cannot create target "__idf_main" because another target with
+  the same name already exists.  The existing target is a static library
+  created in source directory "/home/tux/projects/tautuk_esp32s3_core/main".
+  See documentation for policy CMP0002 for more details.
+Call Stack (most recent call first):
+  main/CMakeLists.txt:3 (idf_component_register)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

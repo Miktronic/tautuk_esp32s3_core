@@ -1,0 +1,376 @@
+�x�x�
+B���ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x29 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  2 2024 02:41:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b59ch ( 46492) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001b5c4 vaddr=3fc91400 size=0291ch ( 10524) load[0m
+[0;32mI (111) esp_image: segment 2: paddr=0001dee8 vaddr=40374000 size=02130h (  8496) load[0m
+[0;32mI (119) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1cb34h (117556) map[0m
+[0;32mI (146) esp_image: segment 4: paddr=0003cb5c vaddr=40376130 size=0b274h ( 45684) load[0m
+[0;32mI (157) esp_image: segment 5: paddr=00047dd8 vaddr=600fe010 size=00004h (     4) load[0m
+[0;32mI (163) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (163) boot: Disabling RNG early entropy source...[0m
+[0;32mI (177) cpu_start: Multicore app[0m
+[0;32mI (177) cpu_start: Pro cpu up.[0m
+[0;32mI (177) cpu_start: Starting app cpu, entry point is 0x4037526c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (195) cpu_start: Pro cpu start user code[0m
+[0;32mI (195) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (196) cpu_start: Application information:[0m
+[0;32mI (198) cpu_start: Project name:     hello_world[0m
+[0;32mI (204) cpu_start: App version:      bc43c6b[0m
+[0;32mI (209) cpu_start: Compile time:     Feb  2 2024 02:41:08[0m
+[0;32mI (215) cpu_start: ELF file SHA256:  21e7a25edfdd0d5c...[0m
+[0;32mI (221) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (226) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (231) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (236) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (248) heap_init: At 3FC94620 len 000550F0 (340 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (261) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (267) heap_init: At 600FE014 len 00001FD4 (7 KiB): RTCRAM[0m
+[0;32mI (274) spi_flash: detected chip: gd[0m
+[0;32mI (277) spi_flash: flash io: dio[0m
+[0;33mW (281) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (295) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (301) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (308) app_start: Starting scheduler on CPU0[0m
+[0;32mI (313) app_start: Starting scheduler on CPU1[0m
+[0;32mI (313) main_task: Started on CPU0[0m
+[0;32mI (323) main_task: Calling app_main()[0m
+[0;32mI (323) TauTuk: Example configured to blink GPIO LED![0m
+[0;32mI (333) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (343) TauTuk: calibration scheme version is Curve Fitting[0m
+[0;32mI (353) TauTuk: ADC Calibration Success[0m
+[0;32mI (353) TauTuk: Calibrating please wait.[0m
+[0;32mI (353) TauTuk: ADC1 Channel[0] Raw Data: 135[0m
+[0;32mI (413) TauTuk: ADC1 Channel[0] Cali Voltage: 116 mV[0m
+[0;32mI (413) TauTuk: Sensor Voltage: 232.000000 mV[0m
+.[0;32mI (413) TauTuk: ADC1 Channel[0] Raw Data: 133[0m
+[0;32mI (463) TauTuk: ADC1 Channel[0] Cali Voltage: 115 mV[0m
+[0;32mI (463) TauTuk: Sensor Voltage: 230.000000 mV[0m
+.[0;32mI (463) TauTuk: ADC1 Channel[0] Raw Data: 125[0m
+[0;32mI (513) TauTuk: ADC1 Channel[0] Cali Voltage: 107 mV[0m
+[0;32mI (513) TauTuk: Sensor Voltage: 214.000000 mV[0m
+.[0;32mI (513) TauTuk: ADC1 Channel[0] Raw Data: 133[0m
+[0;32mI (563) TauTuk: ADC1 Channel[0] Cali Voltage: 115 mV[0m
+[0;32mI (563) TauTuk: Sensor Voltage: 230.000000 mV[0m
+.[0;32mI (563) TauTuk: ADC1 Channel[0] Raw Data: 127[0m
+[0;32mI (613) TauTuk: ADC1 Channel[0] Cali Voltage: 109 mV[0m
+[0;32mI (613) TauTuk: Sensor Voltage: 218.000000 mV[0m
+.[0;32mI (613) TauTuk: ADC1 Channel[0] Raw Data: 127[0m
+[0;32mI (663) TauTuk: ADC1 Channel[0] Cali Voltage: 109 mV[0m
+[0;32mI (663) TauTuk: Sensor Voltage: 218.000000 mV[0m
+.[0;32mI (663) TauTuk: ADC1 Channel[0] Raw Data: 133[0m
+[0;32mI (713) TauTuk: ADC1 Channel[0] Cali Voltage: 115 mV[0m
+[0;32mI (713) TauTuk: Sensor Voltage: 230.000000 mV[0m
+.[0;32mI (713) TauTuk: ADC1 Channel[0] Raw Data: 127[0m
+[0;32mI (763) TauTuk: ADC1 Channel[0] Cali Voltage: 109 mV[0m
+[0;32mI (763) TauTuk: Sensor Voltage: 218.000000 mV[0m
+.[0;32mI (763) TauTuk: ADC1 Channel[0] Raw Data: 127[0m
+[0;32mI (813) TauTuk: ADC1 Channel[0] Cali Voltage: 109 mV[0m
+[0;32mI (813) TauTuk: Sensor Voltage: 218.000000 mV[0m
+.[0;32mI (813) TauTuk: ADC1 Channel[0] Raw Data: 133[0m
+[0;32mI (863) TauTuk: ADC1 Channel[0] Cali Voltage: 115 mV[0m
+[0;32mI (863) TauTuk: Sensor Voltage: 230.000000 mV[0m
+.[0;32mI (863) TauTuk: calcR0 = 56.512127,  done!.[0m
+[0;32mI (863) TauTuk: ** Values from MQ-135 ****[0m
+|    CO   |  Alcohol |   CO2  |  Toluen  |  NH4  |  Aceton  |
+[0;32mI (873) TauTuk: ADC1 Channel[0] Raw Data: 127[0m
+[0;32mI (923) TauTuk: ADC1 Channel[0] Cali Voltage: 109 mV[0m
+[0;32mI (923) TauTuk: Sensor Voltage: 218.000000 mV[0m
+|   3.518592   |   1.208515   |   402.619019   |   0.497226   |   4.029274   |   0.423581   |
+[0;32mI (1923) TauTuk: ADC1 Channel[0] Raw Data: 134[0m
+[0;32mI (1973) TauTuk: ADC1 Channel[0] Cali Voltage: 115 mV[0m
+[0;32mI (1973) TauTuk: Sensor Voltage: 230.000000 mV[0m
+|   4.388177   |   1.444525   |   403.075134   |   0.603229   |   4.628873   |   0.511698   |
+[0;32mI (2973) TauTuk: ADC1 Channel[0] Raw Data: 135[0m
+[0;32mI (3023) TauTuk: ADC1 Channel[0] Cali Voltage: 116 mV[0m
+[0;32mI (3023) TauTuk: Sensor Voltage: 232.000000 mV[0m
+|   4.547837   |   1.486831   |   403.156067   |   0.622391   |   4.733959   |   0.527588   |
+[0;32mI (4023) TauTuk: ADC1 Channel[0] Raw Data: 135[0m
+[0;32mI (4073) TauTuk: ADC1 Channel[0] Cali Voltage: 116 mV[0m
+[0;32mI (4073) TauTuk: Sensor Voltage: 232.000000 mV[0m
+|   4.547837   |   1.486831   |   403.156067   |   0.622391   |   4.733959   |   0.527588   |
+[0;32mI (5073) TauTuk: ADC1 Channel[0] Raw Data: 135[0m
+[0;32mI (5123) TauTuk: ADC1 Channel[0] Cali Voltage: 116 mV[0m
+[0;32mI (5123) TauTuk: Sensor Voltage: 232.000000 mV[0m
+|   4.547837   |   1.486831   |   403.156067   |   0.622391   |   4.733959   |   0.527588   |
+[0;32mI (6123) TauTuk: ADC1 Channel[0] Raw Data: 135[0m
+[0;32mI (6173) TauTuk: ADC1 Channel[0] Cali Voltage: 116 mV[0m
+[0;32mI (6173) TauTuk: Sensor Voltage: 232.000000 mV[0m
+|   4.547837   |   1.486831   |   403.156067   |   0.622391   |   4.733959   |   0.527588   |
+[0;32mI (7173) TauTuk: ADC1 Channel[0] Raw Data: 135[0m
+[0;32mI (7223) TauTuk: ADC1 Channel[0] Cali Voltage: 116 mV[0m
+[0;32mI (7223) TauTuk: Sensor Voltage: 232.000000 mV[0m
+|   4.547837   |   1.486831   |   403.156067   |   0.622391   |   4.733959   |   0.527588   |
+[0;32mI (8223) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (8273) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (8273) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (9273) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (9323) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (9323) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (10323) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (10373) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (10373) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (11373) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (11423) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (11423) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (12423) TauTuk: ADC1 Channel[0] Raw Data: 134[0m
+[0;32mI (12473) TauTuk: ADC1 Channel[0] Cali Voltage: 115 mV[0m
+[0;32mI (12473) TauTuk: Sensor Voltage: 230.000000 mV[0m
+|   4.388177   |   1.444525   |   403.075134   |   0.603229   |   4.628873   |   0.511698   |
+[0;32mI (13473) TauTuk: ADC1 Channel[0] Raw Data: 135[0m
+[0;32mI (13523) TauTuk: ADC1 Channel[0] Cali Voltage: 116 mV[0m
+[0;32mI (13523) TauTuk: Sensor Voltage: 232.000000 mV[0m
+|   4.547837   |   1.486831   |   403.156067   |   0.622391   |   4.733959   |   0.527588   |
+[0;32mI (14523) TauTuk: ADC1 Channel[0] Raw Data: 136[0m
+[0;32mI (14573) TauTuk: ADC1 Channel[0] Cali Voltage: 117 mV[0m
+[0;32mI (14573) TauTuk: Sensor Voltage: 234.000000 mV[0m
+|   4.711930   |   1.530014   |   403.238434   |   0.641998   |   4.840544   |   0.543836   |
+[0;32mI (15573) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (15623) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (15623) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (16623) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (16673) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (16673) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (17673) TauTuk: ADC1 Channel[0] Raw Data: 136[0m
+[0;32mI (17723) TauTuk: ADC1 Channel[0] Cali Voltage: 117 mV[0m
+[0;32mI (17723) TauTuk: Sensor Voltage: 234.000000 mV[0m
+|   4.711930   |   1.530014   |   403.238434   |   0.641998   |   4.840544   |   0.543836   |
+[0;32mI (18723) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (18773) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (18773) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (19773) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (19823) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (19823) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (20823) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (20873) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (20873) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (21873) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (21923) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (21923) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   5.414392   |   1.711757   |   403.582672   |   0.725008   |   5.282058   |   0.612508   |
+[0;32mI (22923) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (22973) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (22973) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (23973) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (24023) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (24023) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   5.414392   |   1.711757   |   403.582672   |   0.725008   |   5.282058   |   0.612508   |
+[0;32mI (25023) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (25073) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (25073) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (26073) TauTuk: ADC1 Channel[0] Raw Data: 135[0m
+[0;32mI (26123) TauTuk: ADC1 Channel[0] Cali Voltage: 116 mV[0m
+[0;32mI (26123) TauTuk: Sensor Voltage: 232.000000 mV[0m
+|   4.547837   |   1.486831   |   403.156067   |   0.622391   |   4.733959   |   0.527588   |
+[0;32mI (27123) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (27173) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (27173) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (28173) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (28223) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (28223) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (29223) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (29273) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (29273) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (30273) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (30323) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (30323) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (31323) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (31373) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (31373) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (32373) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (32423) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (32423) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (33423) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (33473) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (33473) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (34473) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (34523) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (34523) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (35523) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (35573) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (35573) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (36573) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (36623) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (36623) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (37623) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (37673) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (37673) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (38673) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (38723) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (38723) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (39723) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (39773) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (39773) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (40773) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (40823) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (40823) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (41823) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (41873) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (41873) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (42873) TauTuk: ADC1 Channel[0] Raw Data: 136[0m
+[0;32mI (42923) TauTuk: ADC1 Channel[0] Cali Voltage: 117 mV[0m
+[0;32mI (42923) TauTuk: Sensor Voltage: 234.000000 mV[0m
+|   4.711930   |   1.530014   |   403.238434   |   0.641998   |   4.840544   |   0.543836   |
+[0;32mI (43923) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (43973) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (43973) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (44973) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (45023) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (45023) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (46023) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (46073) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (46073) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (47073) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (47123) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (47123) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (48123) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (48173) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (48173) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (49173) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (49223) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (49223) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (50223) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (50273) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (50273) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (51273) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (51323) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (51323) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (52323) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (52373) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (52373) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (53373) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (53423) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (53423) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   5.414392   |   1.711757   |   403.582672   |   0.725008   |   5.282058   |   0.612508   |
+[0;32mI (54423) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (54473) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (54473) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (55473) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (55523) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (55523) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (56523) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (56573) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (56573) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (57573) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (57623) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (57623) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   5.414392   |   1.711757   |   403.582672   |   0.725008   |   5.282058   |   0.612508   |
+[0;32mI (58623) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (58673) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (58673) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (59673) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (59723) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (59723) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (60723) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (60773) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (60773) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (61773) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (61823) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (61823) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (62823) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (62873) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (62873) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   5.053766   |   1.619062   |   403.407593   |   0.682573   |   5.058246   |   0.577426   |
+[0;32mI (63873) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (63923) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (63923) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (64923) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (64973) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (64973) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (65973) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (66023) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (66023) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (67023) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (67073) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (67073) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (68073) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (68123) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (68123) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (69123) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (69173) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (69173) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (70173) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (70223) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (70223) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   5.231684   |   1.664948   |   403.494385   |   0.703554   |   5.169382   |   0.594778   |
+[0;32mI (71223) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (71273) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (71273) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
+[0;32mI (72273) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (72323) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (72323) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   4.880545   |   1.574088   |   403.322296   |   0.662056   |   4.948637   |   0.560447   |
