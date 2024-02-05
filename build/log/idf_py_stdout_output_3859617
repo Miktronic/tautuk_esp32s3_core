@@ -1,0 +1,1287 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x29 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  6 2024 02:24:55[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=2a670h (173680) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=0003a698 vaddr=3fc96d00 size=0464ch ( 17996) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0003ecec vaddr=40374000 size=0132ch (  4908) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=a31f8h (668152) map[0m
+[0;32mI (265) esp_image: segment 4: paddr=000e3220 vaddr=4037532c size=11964h ( 72036) load[0m
+[0;32mI (281) esp_image: segment 5: paddr=000f4b8c vaddr=600fe010 size=00004h (     4) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (290) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Multicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (302) cpu_start: Starting app cpu, entry point is 0x403754ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (320) cpu_start: Pro cpu start user code[0m
+[0;32mI (320) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (320) cpu_start: Application information:[0m
+[0;32mI (323) cpu_start: Project name:     tautek_esp32s3_core[0m
+[0;32mI (329) cpu_start: App version:      a31d4bd-dirty[0m
+[0;32mI (335) cpu_start: Compile time:     Feb  6 2024 05:34:10[0m
+[0;32mI (341) cpu_start: ELF file SHA256:  5ed65cc159764cb5...[0m
+[0;32mI (347) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (352) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (357) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (362) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (366) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (374) heap_init: At 3FC9FA18 len 00049CF8 (295 KiB): DRAM[0m
+[0;32mI (380) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (386) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (393) heap_init: At 600FE014 len 00001FD4 (7 KiB): RTCRAM[0m
+[0;32mI (400) spi_flash: detected chip: gd[0m
+[0;32mI (403) spi_flash: flash io: dio[0m
+[0;33mW (407) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (421) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (427) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (434) app_start: Starting scheduler on CPU0[0m
+[0;32mI (439) app_start: Starting scheduler on CPU1[0m
+[0;32mI (439) main_task: Started on CPU0[0m
+[0;32mI (449) main_task: Calling app_main()[0m
+[0;32mI (449) TauTuk: [APP] Startup..[0m
+[0;32mI (459) TauTuk: [APP] Free memory: 343324 bytes[0m
+[0;32mI (459) TauTuk: [APP] IDF version: v5.1.2-dirty[0m
+[0;32mI (479) example_connect: Start example_connect.[0m
+[0;32mI (479) pp: pp rom version: e7ae62f[0m
+[0;32mI (479) net80211: net80211 rom version: e7ae62f[0m
+I (489) wifi:wifi driver task: 3fca96e8, prio:23, stack:6656, core=0
+I (489) wifi:wifi firmware version: 91b9630
+I (489) wifi:wifi certification version: v7.0
+I (499) wifi:config NVS flash: enabled
+I (499) wifi:config nano formating: disabled
+I (509) wifi:Init data frame dynamic rx buffer num: 32
+I (509) wifi:Init static rx mgmt buffer num: 5
+I (509) wifi:Init management short buffer num: 32
+I (519) wifi:Init dynamic tx buffer num: 32
+I (519) wifi:Init static tx FG buffer num: 2
+I (529) wifi:Init static rx buffer size: 1600
+I (529) wifi:Init static rx buffer num: 10
+I (529) wifi:Init dynamic rx buffer num: 32
+[0;32mI (539) wifi_init: rx ba win: 6[0m
+[0;32mI (539) wifi_init: tcpip mbox: 32[0m
+[0;32mI (549) wifi_init: udp mbox: 6[0m
+[0;32mI (549) wifi_init: tcp mbox: 6[0m
+[0;32mI (549) wifi_init: tcp tx win: 5744[0m
+[0;32mI (559) wifi_init: tcp rx win: 5744[0m
+[0;32mI (559) wifi_init: tcp mss: 1440[0m
+[0;32mI (569) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (569) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (579) phy_init: phy_version 620,ec7ec30,Sep  5 2023,13:49:13[0m
+I (619) wifi:mode : sta (f4:12:fa:65:70:08)
+I (619) wifi:enable tsf
+[0;32mI (619) example_connect: Connecting to dream...[0m
+[0;32mI (619) example_connect: Waiting for IP(s)[0m
+I (3029) wifi:new:<3,1>, old:<1,0>, ap:<255,255>, sta:<3,1>, prof:1
+I (3509) wifi:state: init -> auth (b0)
+I (3529) wifi:state: auth -> assoc (0)
+I (3549) wifi:state: assoc -> run (10)
+I (3659) wifi:connected with dream, aid = 8, channel 3, 40U, bssid = b8:80:35:0b:24:55
+I (3659) wifi:security: WPA2-PSK, phy: bgn, rssi: -58
+I (3659) wifi:pm start, type: 1
+
+I (3669) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3719) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3719) wifi:<ba-add>idx:0 (ifx:0, b8:80:35:0b:24:55), tid:0, ssn:4, winSize:64
+[0;32mI (4679) esp_netif_handlers: example_netif_sta ip: 192.168.0.23, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (4679) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.23[0m
+[0;32mI (5479) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:f612:faff:fe65:7008, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5479) example_common: Connected to example_netif_sta[0m
+[0;32mI (5489) example_common: - IPv4 address: 192.168.0.23,[0m
+[0;32mI (5489) example_common: - IPv6 address: fe80:0000:0000:0000:f612:faff:fe65:7008, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5499) TauTuk: Example configured to blink GPIO LED![0m
+[0;32mI (5509) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (5519) main_task: Returned from app_main()[0m
+[0;32mI (5519) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (5519) TauTuk: calibration scheme version is Curve Fitting[0m
+[0;32mI (5539) TauTuk: ADC Calibration Success[0m
+[0;32mI (5539) TauTuk: Calibrating please wait.[0m
+[0;32mI (5559) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (5629) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (5629) TauTuk: Sensor Voltage: 236.000000 mV[0m
+.[0;32mI (5629) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (5739) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (5739) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (5739) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (5829) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (5829) TauTuk: Sensor Voltage: 242.000000 mV[0m
+.[0;32mI (5829) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (5889) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (5889) TauTuk: Sensor Voltage: 242.000000 mV[0m
+.[0;32mI (5889) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (5989) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (5989) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (5989) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (6089) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (6089) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (6089) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (6179) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (6179) TauTuk: Sensor Voltage: 242.000000 mV[0m
+.[0;32mI (6179) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (6259) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (6259) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (6259) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (6319) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (6319) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (6319) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (6419) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (6419) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (6419) TauTuk: calcR0 = 366.981293,  done!.[0m
+[0;32mI (6419) TauTuk: ** Values from MQ-135 ****[0m
+|    CO   |  Alcohol |   CO2  |  Toluen  |  NH4  |  Aceton  |
+[0;32mI (6439) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (6529) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (6529) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (6539) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (7579) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (7669) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (7669) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (7689) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (8729) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (8809) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (8809) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   3.631941   |   1.239865   |   402.680084   |   0.511214   |   4.110326   |   0.435231   |
+[0;32mI (8829) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.6319408416748047,
+	"Alcohol":	1.2398651838302612,
+	"CO2":	402.68008422851562,
+	"Toluen":	0.51121389865875244,
+	"NH4":	4.110325813293457,
+	"Aceton":	0.435230553150177
+}[0m
+[0;32mI (9849) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (9929) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (9929) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   3.631941   |   1.239865   |   402.680084   |   0.511214   |   4.110326   |   0.435231   |
+[0;32mI (9949) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.6319408416748047,
+	"Alcohol":	1.2398651838302612,
+	"CO2":	402.68008422851562,
+	"Toluen":	0.51121389865875244,
+	"NH4":	4.110325813293457,
+	"Aceton":	0.435230553150177
+}[0m
+[0;32mI (10399) coreMQTT: MQTT connection established with the broker.[0m
+[0;32mI (10399) coreMQTT: MQTT connection successfully established with broker.
+
+[0m
+[0;32mI (10399) coreMQTT: A clean MQTT connection is established. Cleaning up all the stored outgoing publishes.
+
+[0m
+[0;32mI (10419) coreMQTT: Subscribing to the MQTT topic tautuk/events.[0m
+[0;32mI (10459) coreMQTT: SUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (10969) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (11019) coreMQTT: Subscribed to the topic tautuk/events. with maximum QoS 1.
+
+[0m
+[0;32mI (11019) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (11039) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (11039) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (11059) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (11069) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 2.
+
+[0m
+[0;32mI (11819) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (11819) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (11819) coreMQTT: PUBACK received for packet id 2.
+
+[0m
+[0;32mI (11829) coreMQTT: Cleaned up outgoing publish packet with packet id 2.
+
+[0m
+[0;32mI (11849) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (11849) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (11859) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (11869) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (12089) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (12169) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (12169) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (12189) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (13199) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (13289) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (13289) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (13299) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (14329) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (14409) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (14409) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (14439) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (15469) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (15549) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (15559) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (15569) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (16599) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (16679) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (16679) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (16699) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (16919) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (17729) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (17799) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (17799) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (17819) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (17929) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (17949) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 3.
+
+[0m
+[0;32mI (18439) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (18439) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (18459) coreMQTT: PUBACK received for packet id 3.
+
+[0m
+[0;32mI (18459) coreMQTT: Cleaned up outgoing publish packet with packet id 3.
+
+[0m
+[0;32mI (18499) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (18499) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (18509) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (18509) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (18839) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (18929) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (18929) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   3.631941   |   1.239865   |   402.680084   |   0.511214   |   4.110326   |   0.435231   |
+[0;32mI (18939) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.6319408416748047,
+	"Alcohol":	1.2398651838302612,
+	"CO2":	402.68008422851562,
+	"Toluen":	0.51121389865875244,
+	"NH4":	4.110325813293457,
+	"Aceton":	0.435230553150177
+}[0m
+[0;32mI (19969) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (20049) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (20059) TauTuk: Sensor Voltage: 244.000000 mV[0m
+|   4.168806   |   1.385910   |   402.962585   |   0.576758   |   4.482135   |   0.489727   |
+[0;32mI (20069) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.1688055992126465,
+	"Alcohol":	1.3859101533889771,
+	"CO2":	402.96258544921875,
+	"Toluen":	0.576757550239563,
+	"NH4":	4.48213529586792,
+	"Aceton":	0.48972722887992859
+}[0m
+[0;32mI (21099) TauTuk: ADC1 Channel[0] Raw Data: 143[0m
+[0;32mI (21179) TauTuk: ADC1 Channel[0] Cali Voltage: 123 mV[0m
+[0;32mI (21199) TauTuk: Sensor Voltage: 246.000000 mV[0m
+|   4.312098   |   1.424262   |   403.036285   |   0.594068   |   4.578300   |   0.504097   |
+[0;32mI (21199) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.3120980262756348,
+	"Alcohol":	1.4242624044418335,
+	"CO2":	403.03628540039062,
+	"Toluen":	0.59406799077987671,
+	"NH4":	4.57829999923706,
+	"Aceton":	0.50409656763076782
+}[0m
+[0;32mI (22229) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (22309) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (22309) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (22329) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (23359) TauTuk: ADC1 Channel[0] Raw Data: 147[0m
+[0;32mI (23429) TauTuk: ADC1 Channel[0] Cali Voltage: 126 mV[0m
+[0;32mI (23439) TauTuk: Sensor Voltage: 252.000000 mV[0m
+|   4.764860   |   1.543882   |   403.264862   |   0.648304   |   4.874628   |   0.549060   |
+[0;32mI (23449) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.7648601531982422,
+	"Alcohol":	1.5438817739486694,
+	"CO2":	403.26486206054688,
+	"Toluen":	0.64830422401428223,
+	"NH4":	4.8746280670166016,
+	"Aceton":	0.549059510231018
+}[0m
+[0;32mI (23579) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (24479) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (24559) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (24559) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (24579) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (24589) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (24639) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 4.
+
+[0m
+[0;32mI (25169) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (25169) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (25189) coreMQTT: PUBACK received for packet id 4.
+
+[0m
+[0;32mI (25189) coreMQTT: Cleaned up outgoing publish packet with packet id 4.
+
+[0m
+[0;32mI (25209) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (25209) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (25209) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (25219) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (25609) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (25689) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (25689) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (25709) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (26739) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (26809) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (26809) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (26819) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (27839) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (27929) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (27929) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (27939) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (28969) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (29059) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (29069) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (29079) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (30109) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (30189) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (30209) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (30209) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (30269) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (31249) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (31269) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (31299) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 5.
+
+[0m
+[0;32mI (31319) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (31339) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (31359) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (31839) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (31839) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (31839) coreMQTT: PUBACK received for packet id 5.
+
+[0m
+[0;32mI (31849) coreMQTT: Cleaned up outgoing publish packet with packet id 5.
+
+[0m
+[0;32mI (31879) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (31879) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (31889) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (31889) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (32379) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (32449) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (32449) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (32469) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (33499) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (33569) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (33569) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (33589) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (34619) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (34699) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (34699) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   3.760847   |   1.275290   |   402.748901   |   0.527056   |   4.201367   |   0.448416   |
+[0;32mI (34709) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.7608468532562256,
+	"Alcohol":	1.2752898931503296,
+	"CO2":	402.7489013671875,
+	"Toluen":	0.527055859565735,
+	"NH4":	4.2013673782348633,
+	"Aceton":	0.44841587543487549
+}[0m
+[0;32mI (35739) TauTuk: ADC1 Channel[0] Raw Data: 143[0m
+[0;32mI (35819) TauTuk: ADC1 Channel[0] Cali Voltage: 123 mV[0m
+[0;32mI (35829) TauTuk: Sensor Voltage: 246.000000 mV[0m
+|   4.312098   |   1.424262   |   403.036285   |   0.594068   |   4.578300   |   0.504097   |
+[0;32mI (35839) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.3120980262756348,
+	"Alcohol":	1.4242624044418335,
+	"CO2":	403.03628540039062,
+	"Toluen":	0.59406799077987671,
+	"NH4":	4.57829999923706,
+	"Aceton":	0.50409656763076782
+}[0m
+[0;32mI (36809) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (36859) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (36939) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (36939) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (36949) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (37809) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (37839) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 6.
+
+[0m
+[0;32mI (37979) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (38069) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (38069) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (38079) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (38469) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (38469) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (38469) coreMQTT: PUBACK received for packet id 6.
+
+[0m
+[0;32mI (38479) coreMQTT: Cleaned up outgoing publish packet with packet id 6.
+
+[0m
+[0;32mI (38499) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (38499) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (38499) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (38509) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (39119) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (39199) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (39209) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (39219) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (40249) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (40329) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (40329) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (40349) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (41379) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (41459) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (41459) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (41479) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (42509) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (42579) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (42589) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (42609) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (43369) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (43639) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (43709) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (43709) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (43719) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (44369) coreMQTT: Unsubscribing from the MQTT topic tautuk/events.[0m
+[0;32mI (44389) coreMQTT: UNSUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (44749) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (44829) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (44839) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   3.631941   |   1.239865   |   402.680084   |   0.511214   |   4.110326   |   0.435231   |
+[0;32mI (44849) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.6319408416748047,
+	"Alcohol":	1.2398651838302612,
+	"CO2":	402.68008422851562,
+	"Toluen":	0.51121389865875244,
+	"NH4":	4.110325813293457,
+	"Aceton":	0.435230553150177
+}[0m
+[0;32mI (44969) coreMQTT: Unsubscribed from the topic tautuk/events.
+
+[0m
+[0;32mI (44969) coreMQTT: Disconnecting the MQTT connection with a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com.[0m
+[0;32mI (44979) coreMQTT: Disconnected from the broker.[0m
+[0;32mI (44989) coreMQTT: Demo completed successfully.[0m
+[0;32mI (44989) coreMQTT: Short delay before starting the next iteration....
+[0m
+[0;32mI (45879) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (45969) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (45969) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (45989) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (47009) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (47109) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (47109) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (47129) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (48149) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (48219) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (48219) TauTuk: Sensor Voltage: 244.000000 mV[0m
+|   4.168806   |   1.385910   |   402.962585   |   0.576758   |   4.482135   |   0.489727   |
+[0;32mI (48239) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.1688055992126465,
+	"Alcohol":	1.3859101533889771,
+	"CO2":	402.96258544921875,
+	"Toluen":	0.576757550239563,
+	"NH4":	4.48213529586792,
+	"Aceton":	0.48972722887992859
+}[0m
+[0;32mI (49269) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (49339) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (49339) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (49359) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (49999) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (50389) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (50469) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (50469) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (50489) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (51519) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (51609) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (51609) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (51629) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (52649) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (52719) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (52719) TauTuk: Sensor Voltage: 244.000000 mV[0m
+|   4.168806   |   1.385910   |   402.962585   |   0.576758   |   4.482135   |   0.489727   |
+[0;32mI (52739) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.1688055992126465,
+	"Alcohol":	1.3859101533889771,
+	"CO2":	402.96258544921875,
+	"Toluen":	0.576757550239563,
+	"NH4":	4.48213529586792,
+	"Aceton":	0.48972722887992859
+}[0m
+[0;32mI (53449) coreMQTT: MQTT connection established with the broker.[0m
+[0;32mI (53449) coreMQTT: MQTT connection successfully established with broker.
+
+[0m
+[0;32mI (53449) coreMQTT: A clean MQTT connection is established. Cleaning up all the stored outgoing publishes.
+
+[0m
+[0;32mI (53469) coreMQTT: Subscribing to the MQTT topic tautuk/events.[0m
+[0;32mI (53509) coreMQTT: SUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (53769) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (53869) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (53869) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (53889) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (54079) coreMQTT: Subscribed to the topic tautuk/events. with maximum QoS 1.
+
+[0m
+[0;32mI (54079) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (54109) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 9.
+
+[0m
+[0;32mI (54739) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (54739) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (54739) coreMQTT: PUBACK received for packet id 9.
+
+[0m
+[0;32mI (54749) coreMQTT: Cleaned up outgoing publish packet with packet id 9.
+
+[0m
+[0;32mI (54769) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (54769) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (54789) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (54789) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (54909) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (54979) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (54979) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (54999) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (56029) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (56099) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (56099) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (56119) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (57149) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (57229) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (57229) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   3.631941   |   1.239865   |   402.680084   |   0.511214   |   4.110326   |   0.435231   |
+[0;32mI (57249) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.6319408416748047,
+	"Alcohol":	1.2398651838302612,
+	"CO2":	402.68008422851562,
+	"Toluen":	0.51121389865875244,
+	"NH4":	4.110325813293457,
+	"Aceton":	0.435230553150177
+}[0m
+[0;32mI (58279) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (58359) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (58359) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (58379) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (59399) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (59479) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (59479) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   3.760847   |   1.275290   |   402.748901   |   0.527056   |   4.201367   |   0.448416   |
+[0;32mI (59499) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.7608468532562256,
+	"Alcohol":	1.2752898931503296,
+	"CO2":	402.7489013671875,
+	"Toluen":	0.527055859565735,
+	"NH4":	4.2013673782348633,
+	"Aceton":	0.44841587543487549
+}[0m
+[0;32mI (59639) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (60529) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (60609) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (60609) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (60619) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (60649) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (60669) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 10.
+
+[0m
+[0;32mI (61139) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (61139) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (61139) coreMQTT: PUBACK received for packet id 10.
+
+[0m
+[0;32mI (61149) coreMQTT: Cleaned up outgoing publish packet with packet id 10.
+
+[0m
+[0;32mI (61169) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (61169) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (61169) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (61179) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (61649) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (61729) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (61729) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (61749) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (62779) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (62859) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (62859) TauTuk: Sensor Voltage: 244.000000 mV[0m
+|   4.168806   |   1.385910   |   402.962585   |   0.576758   |   4.482135   |   0.489727   |
+[0;32mI (62879) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.1688055992126465,
+	"Alcohol":	1.3859101533889771,
+	"CO2":	402.96258544921875,
+	"Toluen":	0.576757550239563,
+	"NH4":	4.48213529586792,
+	"Aceton":	0.48972722887992859
+}[0m
+[0;32mI (63909) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (63979) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (63989) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (63999) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (65029) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (65109) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (65129) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (65129) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (66089) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (66159) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (66239) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (66239) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (66259) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (67099) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (67149) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 11.
+
+[0m
+[0;32mI (67289) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (67359) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (67359) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (67379) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (67689) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (67689) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (67709) coreMQTT: PUBACK received for packet id 11.
+
+[0m
+[0;32mI (67709) coreMQTT: Cleaned up outgoing publish packet with packet id 11.
+
+[0m
+[0;32mI (67719) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (67719) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (67729) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (67729) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (68409) TauTuk: ADC1 Channel[0] Raw Data: 143[0m
+[0;32mI (68489) TauTuk: ADC1 Channel[0] Cali Voltage: 123 mV[0m
+[0;32mI (68489) TauTuk: Sensor Voltage: 246.000000 mV[0m
+|   4.312098   |   1.424262   |   403.036285   |   0.594068   |   4.578300   |   0.504097   |
+[0;32mI (68509) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.3120980262756348,
+	"Alcohol":	1.4242624044418335,
+	"CO2":	403.03628540039062,
+	"Toluen":	0.59406799077987671,
+	"NH4":	4.57829999923706,
+	"Aceton":	0.50409656763076782
+}[0m
+[0;32mI (69539) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (69619) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (69619) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (69639) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (70669) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (70739) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (70749) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (70769) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (71799) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (71889) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (71889) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (71909) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (72589) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (72919) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (72999) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (72999) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (73019) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (73599) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (73619) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 12.
+
+[0m
+[0;32mI (74039) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (74119) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (74119) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.893248   |   1.311433   |   402.818909   |   0.543257   |   4.293677   |   0.461891   |
+[0;32mI (74129) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	3.8932480812072754,
+	"Alcohol":	1.311432957649231,
+	"CO2":	402.81890869140625,
+	"Toluen":	0.54325687885284424,
+	"NH4":	4.29367733001709,
+	"Aceton":	0.46189102530479431
+}[0m
+[0;32mI (74159) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (74159) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (74159) coreMQTT: PUBACK received for packet id 12.
+
+[0m
+[0;32mI (74169) coreMQTT: Cleaned up outgoing publish packet with packet id 12.
+
+[0m
+[0;32mI (74189) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (74189) coreMQTT: State record updated. New state=MQTTPubAckSend.[0m
+[0;32mI (74199) coreMQTT: Incoming QOS : 1.[0m
+[0;32mI (74199) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 1.
+Incoming Publish Message : {
+	"id":	"#tt0000.
+
+[0m
+[0;32mI (75169) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (75269) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (75269) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.029212   |   1.348303   |   402.890137   |   0.559822   |   4.387264   |   0.475660   |
+[0;32mI (75279) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.0292115211486816,
+	"Alcohol":	1.3483033180236816,
+	"CO2":	402.89013671875,
+	"Toluen":	0.55982232093811035,
+	"NH4":	4.3872637748718262,
+	"Aceton":	0.4756600558757782
+}[0m
+[0;32mI (76309) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (76379) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (76379) TauTuk: Sensor Voltage: 244.000000 mV[0m
+|   4.168806   |   1.385910   |   402.962585   |   0.576758   |   4.482135   |   0.489727   |
+[0;32mI (76399) TauTuk: my_json_string:
+{
+	"id":	"#tt0000001",
+	"CO":	4.1688055992126465,
+	"Alcohol":	1.3859101533889771,
+	"CO2":	402.96258544921875,
+	"Toluen":	0.576757550239563,
+	"NH4":	4.48213529586792,
+	"Aceton":	0.48972722887992859
+}[0m

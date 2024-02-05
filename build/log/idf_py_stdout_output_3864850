@@ -1,0 +1,643 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x29 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+[0;32mI (27) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Feb  6 2024 02:24:55[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v0.1[0m
+[0;32mI (34) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (39) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 2MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot: End of partition table[0m
+[0;32mI (91) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=2a230h (172592) map[0m
+[0;32mI (131) esp_image: segment 1: paddr=0003a258 vaddr=3fc96d00 size=0463ch ( 17980) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0003e89c vaddr=40374000 size=0177ch (  6012) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=9be1ch (638492) map[0m
+[0;32mI (260) esp_image: segment 4: paddr=000dbe44 vaddr=4037577c size=11514h ( 70932) load[0m
+[0;32mI (276) esp_image: segment 5: paddr=000ed360 vaddr=600fe010 size=00004h (     4) load[0m
+[0;32mI (284) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (284) boot: Disabling RNG early entropy source...[0m
+[0;32mI (296) cpu_start: Multicore app[0m
+[0;32mI (296) cpu_start: Pro cpu up.[0m
+[0;32mI (296) cpu_start: Starting app cpu, entry point is 0x403754ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (314) cpu_start: Pro cpu start user code[0m
+[0;32mI (314) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (314) cpu_start: Application information:[0m
+[0;32mI (317) cpu_start: Project name:     tautek_esp32s3_core[0m
+[0;32mI (323) cpu_start: App version:      a31d4bd-dirty[0m
+[0;32mI (329) cpu_start: Compile time:     Feb  6 2024 05:34:10[0m
+[0;32mI (335) cpu_start: ELF file SHA256:  8b3d2e7557e6c0b0...[0m
+[0;32mI (341) cpu_start: ESP-IDF:          v5.1.2-dirty[0m
+[0;32mI (346) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (351) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (356) cpu_start: Chip rev:         v0.1[0m
+[0;32mI (361) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (368) heap_init: At 3FC9FA08 len 00049D08 (295 KiB): DRAM[0m
+[0;32mI (374) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM[0m
+[0;32mI (381) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (387) heap_init: At 600FE014 len 00001FD4 (7 KiB): RTCRAM[0m
+[0;32mI (394) spi_flash: detected chip: gd[0m
+[0;32mI (397) spi_flash: flash io: dio[0m
+[0;33mW (401) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (415) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (421) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (429) app_start: Starting scheduler on CPU0[0m
+[0;32mI (433) app_start: Starting scheduler on CPU1[0m
+[0;32mI (433) main_task: Started on CPU0[0m
+[0;32mI (443) main_task: Calling app_main()[0m
+[0;32mI (443) TauTuk: [APP] Startup..[0m
+[0;32mI (453) TauTuk: [APP] Free memory: 343340 bytes[0m
+[0;32mI (453) TauTuk: [APP] IDF version: v5.1.2-dirty[0m
+[0;32mI (473) example_connect: Start example_connect.[0m
+[0;32mI (473) pp: pp rom version: e7ae62f[0m
+[0;32mI (473) net80211: net80211 rom version: e7ae62f[0m
+I (483) wifi:wifi driver task: 3fca96d8, prio:23, stack:6656, core=0
+I (483) wifi:wifi firmware version: 91b9630
+I (483) wifi:wifi certification version: v7.0
+I (493) wifi:config NVS flash: enabled
+I (493) wifi:config nano formating: disabled
+I (503) wifi:Init data frame dynamic rx buffer num: 32
+I (503) wifi:Init static rx mgmt buffer num: 5
+I (503) wifi:Init management short buffer num: 32
+I (513) wifi:Init dynamic tx buffer num: 32
+I (513) wifi:Init static tx FG buffer num: 2
+I (523) wifi:Init static rx buffer size: 1600
+I (523) wifi:Init static rx buffer num: 10
+I (523) wifi:Init dynamic rx buffer num: 32
+[0;32mI (533) wifi_init: rx ba win: 6[0m
+[0;32mI (533) wifi_init: tcpip mbox: 32[0m
+[0;32mI (543) wifi_init: udp mbox: 6[0m
+[0;32mI (543) wifi_init: tcp mbox: 6[0m
+[0;32mI (543) wifi_init: tcp tx win: 5744[0m
+[0;32mI (553) wifi_init: tcp rx win: 5744[0m
+[0;32mI (553) wifi_init: tcp mss: 1440[0m
+[0;32mI (563) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (563) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (573) phy_init: phy_version 620,ec7ec30,Sep  5 2023,13:49:13[0m
+I (613) wifi:mode : sta (f4:12:fa:65:70:08)
+I (613) wifi:enable tsf
+[0;32mI (613) example_connect: Connecting to dream...[0m
+[0;32mI (613) example_connect: Waiting for IP(s)[0m
+I (3023) wifi:new:<3,1>, old:<1,0>, ap:<255,255>, sta:<3,1>, prof:1
+I (3503) wifi:state: init -> auth (b0)
+I (3523) wifi:state: auth -> assoc (0)
+I (3543) wifi:state: assoc -> run (10)
+I (3653) wifi:connected with dream, aid = 8, channel 3, 40U, bssid = b8:80:35:0b:24:55
+I (3653) wifi:security: WPA2-PSK, phy: bgn, rssi: -62
+I (3663) wifi:pm start, type: 1
+
+I (3663) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3673) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3723) wifi:<ba-add>idx:0 (ifx:0, b8:80:35:0b:24:55), tid:0, ssn:3, winSize:64
+[0;32mI (5173) esp_netif_handlers: example_netif_sta ip: 192.168.0.23, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (5173) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.0.23[0m
+[0;32mI (5473) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:f612:faff:fe65:7008, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5473) example_common: Connected to example_netif_sta[0m
+[0;32mI (5483) example_common: - IPv4 address: 192.168.0.23,[0m
+[0;32mI (5483) example_common: - IPv6 address: fe80:0000:0000:0000:f612:faff:fe65:7008, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5493) TauTuk: Example configured to blink GPIO LED![0m
+[0;32mI (5503) gpio: GPIO[19]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (5513) main_task: Returned from app_main()[0m
+[0;32mI (5513) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (5513) TauTuk: calibration scheme version is Curve Fitting[0m
+[0;32mI (5533) TauTuk: ADC Calibration Success[0m
+[0;32mI (5533) TauTuk: Calibrating please wait.[0m
+[0;32mI (5543) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (5623) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (5623) TauTuk: Sensor Voltage: 238.000000 mV[0m
+.[0;32mI (5623) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (5713) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (5713) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (5713) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (5803) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (5803) TauTuk: Sensor Voltage: 242.000000 mV[0m
+.[0;32mI (5813) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (5883) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (5883) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (5883) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (5973) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (5973) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (5973) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (6073) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (6073) TauTuk: Sensor Voltage: 244.000000 mV[0m
+.[0;32mI (6073) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (6143) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (6153) TauTuk: Sensor Voltage: 244.000000 mV[0m
+.[0;32mI (6153) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (6223) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (6223) TauTuk: Sensor Voltage: 236.000000 mV[0m
+.[0;32mI (6223) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (6323) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (6333) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (6333) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (6423) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (6423) TauTuk: Sensor Voltage: 240.000000 mV[0m
+.[0;32mI (6423) TauTuk: calcR0 = 366.678284,  done!.[0m
+[0;32mI (6453) TauTuk: ** Values from MQ-135 ****[0m
+|    CO   |  Alcohol |   CO2  |  Toluen  |  NH4  |  Aceton  |
+[0;32mI (6453) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (6583) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (6583) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (7603) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (7693) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (7693) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (8703) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (8783) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (8793) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (8833) coreMQTT: MQTT connection established with the broker.[0m
+[0;32mI (8833) coreMQTT: MQTT connection successfully established with broker.
+
+[0m
+[0;32mI (8833) coreMQTT: A clean MQTT connection is established. Cleaning up all the stored outgoing publishes.
+
+[0m
+[0;32mI (8843) coreMQTT: Subscribing to the MQTT topic tautuk/events.[0m
+[0;32mI (8883) coreMQTT: SUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (9393) coreMQTT: Subscribed to the topic tautuk/events. with maximum QoS 0.
+
+[0m
+[0;32mI (9393) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (9443) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 2.
+
+[0m
+[0;32mI (9803) TauTuk: ADC1 Channel[0] Raw Data: 143[0m
+[0;32mI (9863) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (9863) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (9883) coreMQTT: Incoming QOS : 0.[0m
+[0;32mI (9883) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 0.
+Incoming Publish Message : {"id":#tt0000001,.
+
+[0m
+[0;32mI (9893) TauTuk: ADC1 Channel[0] Cali Voltage: 123 mV[0m
+[0;32mI (9903) TauTuk: Sensor Voltage: 246.000000 mV[0m
+|   4.298099   |   1.420526   |   403.029114   |   0.592380   |   4.568958   |   0.502696   |
+[0;32mI (9913) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (9923) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (9923) coreMQTT: PUBACK received for packet id 2.
+
+[0m
+[0;32mI (9933) coreMQTT: Cleaned up outgoing publish packet with packet id 2.
+
+[0m
+[0;32mI (10923) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (10993) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (10993) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (11953) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (12003) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (12083) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (12083) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (12963) coreMQTT: Unsubscribing from the MQTT topic tautuk/events.[0m
+[0;32mI (12983) coreMQTT: UNSUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (13093) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (13163) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (13163) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (13563) coreMQTT: Unsubscribed from the topic tautuk/events.
+
+[0m
+[0;32mI (13563) coreMQTT: Disconnecting the MQTT connection with a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com.[0m
+[0;32mI (13573) coreMQTT: Disconnected from the broker.[0m
+[0;32mI (13603) coreMQTT: Demo completed successfully.[0m
+[0;32mI (13603) coreMQTT: Short delay before starting the next iteration....
+[0m
+[0;32mI (14163) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (14253) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (14253) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (15263) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (15353) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (15353) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (16353) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (16433) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (16433) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (16613) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (17443) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (17533) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (17533) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (18553) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (18633) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (18633) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (19263) coreMQTT: MQTT connection established with the broker.[0m
+[0;32mI (19263) coreMQTT: MQTT connection successfully established with broker.
+
+[0m
+[0;32mI (19263) coreMQTT: A clean MQTT connection is established. Cleaning up all the stored outgoing publishes.
+
+[0m
+[0;32mI (19283) coreMQTT: Subscribing to the MQTT topic tautuk/events.[0m
+[0;32mI (19323) coreMQTT: SUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (19633) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (19713) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (19713) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (19883) coreMQTT: Subscribed to the topic tautuk/events. with maximum QoS 0.
+
+[0m
+[0;32mI (19883) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (19933) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 5.
+
+[0m
+[0;32mI (20463) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (20463) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (20463) coreMQTT: PUBACK received for packet id 5.
+
+[0m
+[0;32mI (20473) coreMQTT: Cleaned up outgoing publish packet with packet id 5.
+
+[0m
+[0;32mI (20493) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (20493) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (20503) coreMQTT: Incoming QOS : 0.[0m
+[0;32mI (20513) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 0.
+Incoming Publish Message : {"id":#tt0000001,.
+
+[0m
+[0;32mI (20713) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (20803) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (20803) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (21813) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (21893) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (21903) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   3.748637   |   1.271945   |   402.742401   |   0.525558   |   4.192794   |   0.447170   |
+[0;32mI (22543) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (22903) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (22973) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (22973) TauTuk: Sensor Voltage: 244.000000 mV[0m
+|   4.155272   |   1.382275   |   402.955597   |   0.575119   |   4.472990   |   0.488366   |
+[0;32mI (23553) coreMQTT: Unsubscribing from the MQTT topic tautuk/events.[0m
+[0;32mI (23573) coreMQTT: UNSUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (23993) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (24083) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (24083) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (24183) coreMQTT: Unsubscribed from the topic tautuk/events.
+
+[0m
+[0;32mI (24183) coreMQTT: Disconnecting the MQTT connection with a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com.[0m
+[0;32mI (24183) coreMQTT: Disconnected from the broker.[0m
+[0;32mI (24213) coreMQTT: Demo completed successfully.[0m
+[0;32mI (24213) coreMQTT: Short delay before starting the next iteration....
+[0m
+[0;32mI (25093) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (25183) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (25183) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (26183) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (26263) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (26263) TauTuk: Sensor Voltage: 244.000000 mV[0m
+|   4.155272   |   1.382275   |   402.955597   |   0.575119   |   4.472990   |   0.488366   |
+[0;32mI (27213) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (27273) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (27353) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (27353) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (28373) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (28493) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (28503) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (29533) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (29613) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (29613) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (30623) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (30713) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (30713) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (30833) coreMQTT: MQTT connection established with the broker.[0m
+[0;32mI (30833) coreMQTT: MQTT connection successfully established with broker.
+
+[0m
+[0;32mI (30833) coreMQTT: An MQTT session with broker is re-established. Resending unacked publishes.[0m
+[0;32mI (30853) coreMQTT: Subscribing to the MQTT topic tautuk/events.[0m
+[0;32mI (30883) coreMQTT: SUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (31443) coreMQTT: Subscribed to the topic tautuk/events. with maximum QoS 0.
+
+[0m
+[0;32mI (31443) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (31493) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 8.
+
+[0m
+[0;32mI (31713) TauTuk: ADC1 Channel[0] Raw Data: 143[0m
+[0;32mI (31793) TauTuk: ADC1 Channel[0] Cali Voltage: 123 mV[0m
+[0;32mI (31793) TauTuk: Sensor Voltage: 246.000000 mV[0m
+|   4.298099   |   1.420526   |   403.029114   |   0.592380   |   4.568958   |   0.502696   |
+[0;32mI (32053) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (32053) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (32053) coreMQTT: PUBACK received for packet id 8.
+
+[0m
+[0;32mI (32063) coreMQTT: Cleaned up outgoing publish packet with packet id 8.
+
+[0m
+[0;32mI (32083) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (32083) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (32093) coreMQTT: Incoming QOS : 0.[0m
+[0;32mI (32093) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 0.
+Incoming Publish Message : {"id":#tt0000001,.
+
+[0m
+[0;32mI (32823) TauTuk: ADC1 Channel[0] Raw Data: 143[0m
+[0;32mI (32903) TauTuk: ADC1 Channel[0] Cali Voltage: 123 mV[0m
+[0;32mI (32903) TauTuk: Sensor Voltage: 246.000000 mV[0m
+|   4.298099   |   1.420526   |   403.029114   |   0.592380   |   4.568958   |   0.502696   |
+[0;32mI (33923) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (34013) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (34013) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (34413) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (35023) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (35103) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (35113) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (35423) coreMQTT: Unsubscribing from the MQTT topic tautuk/events.[0m
+[0;32mI (35443) coreMQTT: UNSUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (36073) coreMQTT: Unsubscribed from the topic tautuk/events.
+
+[0m
+[0;32mI (36073) coreMQTT: Disconnecting the MQTT connection with a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com.[0m
+[0;32mI (36083) coreMQTT: Disconnected from the broker.[0m
+[0;32mI (36103) coreMQTT: Demo completed successfully.[0m
+[0;32mI (36103) coreMQTT: Short delay before starting the next iteration....
+[0m
+[0;32mI (36113) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (36203) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (36203) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (37203) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (37293) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (37293) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   3.620149   |   1.236613   |   402.673737   |   0.509761   |   4.101938   |   0.434021   |
+[0;32mI (38303) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (38393) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (38393) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (39113) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (39393) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (39473) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (39483) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (40483) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (40583) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (40593) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (41623) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (41703) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (41703) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (42723) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (42803) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (42803) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;31mE (43173) coreMQTT: CONNACK recv failed with status = MQTTNoDataAvailable.[0m
+[0;31mE (43173) coreMQTT: MQTT connection failed with status = MQTTNoDataAvailable.[0m
+[0;31mE (43173) coreMQTT: Connection with MQTT broker failed with status MQTTNoDataAvailable.[0m
+[0;32mI (43673) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (43803) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (43903) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (43903) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (44923) TauTuk: ADC1 Channel[0] Raw Data: 142[0m
+[0;32mI (45033) TauTuk: ADC1 Channel[0] Cali Voltage: 122 mV[0m
+[0;32mI (45033) TauTuk: Sensor Voltage: 244.000000 mV[0m
+|   4.155272   |   1.382275   |   402.955597   |   0.575119   |   4.472990   |   0.488366   |
+[0;32mI (46033) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (46113) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (46113) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (47133) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (47223) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (47223) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;31mE (47653) coreMQTT: CONNACK recv failed with status = MQTTNoDataAvailable.[0m
+[0;31mE (47653) coreMQTT: MQTT connection failed with status = MQTTNoDataAvailable.[0m
+[0;31mE (47653) coreMQTT: Connection with MQTT broker failed with status MQTTNoDataAvailable.[0m
+[0;32mI (48233) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (48313) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (48313) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (48553) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (49323) TauTuk: ADC1 Channel[0] Raw Data: 143[0m
+[0;32mI (49393) TauTuk: ADC1 Channel[0] Cali Voltage: 123 mV[0m
+[0;32mI (49393) TauTuk: Sensor Voltage: 246.000000 mV[0m
+|   4.298099   |   1.420526   |   403.029114   |   0.592380   |   4.568958   |   0.502696   |
+[0;32mI (50423) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (50543) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (50543) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (51553) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (51633) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (51643) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (52133) coreMQTT: MQTT connection established with the broker.[0m
+[0;32mI (52133) coreMQTT: MQTT connection successfully established with broker.
+
+[0m
+[0;32mI (52133) coreMQTT: An MQTT session with broker is re-established. Resending unacked publishes.[0m
+[0;32mI (52153) coreMQTT: Subscribing to the MQTT topic tautuk/events.[0m
+[0;32mI (52183) coreMQTT: SUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (52663) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (52753) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (52753) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (52833) coreMQTT: Subscribed to the topic tautuk/events. with maximum QoS 0.
+
+[0m
+[0;32mI (52833) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (52883) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 11.
+
+[0m
+[0;32mI (53403) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (53403) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (53403) coreMQTT: PUBACK received for packet id 11.
+
+[0m
+[0;32mI (53423) coreMQTT: Cleaned up outgoing publish packet with packet id 11.
+
+[0m
+[0;32mI (53763) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (53843) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (53843) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (54433) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (54443) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (54443) coreMQTT: Incoming QOS : 0.[0m
+[0;32mI (54453) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 0.
+Incoming Publish Message : {"id":#tt0000001,.
+
+[0m
+[0;32mI (54863) TauTuk: ADC1 Channel[0] Raw Data: 133[0m
+[0;32mI (54953) TauTuk: ADC1 Channel[0] Cali Voltage: 115 mV[0m
+[0;32mI (54953) TauTuk: Sensor Voltage: 230.000000 mV[0m
+|   3.254934   |   1.134827   |   402.474854   |   0.464466   |   3.836885   |   0.396269   |
+[0;32mI (55713) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (55963) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (56043) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (56063) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (56713) coreMQTT: Unsubscribing from the MQTT topic tautuk/events.[0m
+[0;32mI (56743) coreMQTT: UNSUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (57073) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (57163) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (57173) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (57563) coreMQTT: Unsubscribed from the topic tautuk/events.
+
+[0m
+[0;32mI (57563) coreMQTT: Disconnecting the MQTT connection with a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com.[0m
+[0;32mI (57573) coreMQTT: Disconnected from the broker.[0m
+[0;32mI (57593) coreMQTT: Demo completed successfully.[0m
+[0;32mI (57593) coreMQTT: Short delay before starting the next iteration....
+[0m
+[0;32mI (58193) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (58283) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (58283) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (59293) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (59383) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (59383) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (60383) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (60463) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (60463) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (60593) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (61473) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (61563) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (61563) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   3.748637   |   1.271945   |   402.742401   |   0.525558   |   4.192794   |   0.447170   |
+[0;32mI (62573) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (62663) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (62663) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (63453) coreMQTT: MQTT connection established with the broker.[0m
+[0;32mI (63453) coreMQTT: MQTT connection successfully established with broker.
+
+[0m
+[0;32mI (63453) coreMQTT: An MQTT session with broker is re-established. Resending unacked publishes.[0m
+[0;32mI (63463) coreMQTT: Subscribing to the MQTT topic tautuk/events.[0m
+[0;32mI (63503) coreMQTT: SUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (63663) TauTuk: ADC1 Channel[0] Raw Data: 140[0m
+[0;32mI (63743) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (63743) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (64143) coreMQTT: Subscribed to the topic tautuk/events. with maximum QoS 0.
+
+[0m
+[0;32mI (64143) coreMQTT: Sending Publish to the MQTT topic tautuk/events.[0m
+[0;32mI (64183) coreMQTT: PUBLISH sent for topic tautuk/events to broker with packet ID 14.
+
+[0m
+[0;32mI (64753) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (64843) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (64843) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   3.748637   |   1.271945   |   402.742401   |   0.525558   |   4.192794   |   0.447170   |
+[0;32mI (64843) coreMQTT: Ack packet deserialized with result: MQTTSuccess.[0m
+[0;32mI (64863) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (64863) coreMQTT: PUBACK received for packet id 14.
+
+[0m
+[0;32mI (64873) coreMQTT: Cleaned up outgoing publish packet with packet id 14.
+
+[0m
+[0;32mI (64893) coreMQTT: De-serialized incoming PUBLISH packet: DeserializerResult=MQTTSuccess.[0m
+[0;32mI (64893) coreMQTT: State record updated. New state=MQTTPublishDone.[0m
+[0;32mI (64903) coreMQTT: Incoming QOS : 0.[0m
+[0;32mI (64903) coreMQTT: Incoming Publish Topic Name: tautuk/events matches subscribed topic.
+Incoming Publish message Packet Id is 0.
+Incoming Publish Message : {"id":#tt0000001,.
+
+[0m
+[0;32mI (65873) TauTuk: ADC1 Channel[0] Raw Data: 138[0m
+[0;32mI (65953) TauTuk: ADC1 Channel[0] Cali Voltage: 119 mV[0m
+[0;32mI (65953) TauTuk: Sensor Voltage: 238.000000 mV[0m
+|   3.748637   |   1.271945   |   402.742401   |   0.525558   |   4.192794   |   0.447170   |
+[0;32mI (66403) coreMQTT: Delay before continuing to next iteration.
+
+[0m
+[0;32mI (66963) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (67043) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (67043) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (67403) coreMQTT: Unsubscribing from the MQTT topic tautuk/events.[0m
+[0;32mI (67443) coreMQTT: UNSUBSCRIBE sent for topic tautuk/events to broker.
+
+[0m
+[0;32mI (68063) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (68103) coreMQTT: Unsubscribed from the topic tautuk/events.
+
+[0m
+[0;32mI (68103) coreMQTT: Disconnecting the MQTT connection with a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com.[0m
+[0;32mI (68113) coreMQTT: Disconnected from the broker.[0m
+[0;32mI (68123) coreMQTT: Demo completed successfully.[0m
+[0;32mI (68133) coreMQTT: Short delay before starting the next iteration....
+[0m
+[0;32mI (68143) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (68143) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (69173) TauTuk: ADC1 Channel[0] Raw Data: 139[0m
+[0;32mI (69253) TauTuk: ADC1 Channel[0] Cali Voltage: 120 mV[0m
+[0;32mI (69253) TauTuk: Sensor Voltage: 240.000000 mV[0m
+|   3.880608   |   1.307993   |   402.812256   |   0.541713   |   4.284915   |   0.460607   |
+[0;32mI (70263) TauTuk: ADC1 Channel[0] Raw Data: 141[0m
+[0;32mI (70343) TauTuk: ADC1 Channel[0] Cali Voltage: 121 mV[0m
+[0;32mI (70343) TauTuk: Sensor Voltage: 242.000000 mV[0m
+|   4.016130   |   1.344766   |   402.883331   |   0.558232   |   4.378311   |   0.474338   |
+[0;32mI (71133) coreMQTT: Establishing a TLS session to a37o1eoru1dfpq-ats.iot.us-east-1.amazonaws.com:8883.[0m
+[0;32mI (71343) TauTuk: ADC1 Channel[0] Raw Data: 137[0m
+[0;32mI (71453) TauTuk: ADC1 Channel[0] Cali Voltage: 118 mV[0m
+[0;32mI (71463) TauTuk: Sensor Voltage: 236.000000 mV[0m
+|   3.620149   |   1.236613   |   402.673737   |   0.509761   |   4.101938   |   0.434021   |

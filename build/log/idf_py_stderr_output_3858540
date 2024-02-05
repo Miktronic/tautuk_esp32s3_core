@@ -1,0 +1,21 @@
+[0;33m--- esp-idf-monitor 1.3.4 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x403754ac: call_start_cpu1 at /home/tux/esp/v5.1.2/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0;33m0x403759f6: panic_abort at /home/tux/esp/v5.1.2/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4037bf6d: esp_system_abort at /home/tux/esp/v5.1.2/esp-idf/components/esp_system/port/esp_system_chip.c:84
+[0m
+[0;33m0x4037ecb6: vApplicationStackOverflowHook at /home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+[0m
+[0;33m0x4037d673: vTaskSwitchContext at /home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3729
+[0m
+[0;33m0x4037edc4: _frxt_dispatch at /home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+[0m
+[0;33m0x4037edba: _frxt_int_exit at /home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+[0m
+[0;33m0x4037f0a1: _xt_context_save at /home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_context.S:192
+[0m
+[0;33m0x403754ac: call_start_cpu1 at /home/tux/esp/v5.1.2/esp-idf/components/esp_system/port/cpu_start.c:157
+[0m
+[0m

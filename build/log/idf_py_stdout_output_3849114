@@ -1,0 +1,362 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/tux/projects/tautuk_esp32s3_core/build/bootloader/esp-idf/esptool_py && /home/tux/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/tux/esp/v5.1.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/tux/projects/tautuk_esp32s3_core/build/bootloader/bootloader.bin
+Bootloader binary size 0x51c0 bytes. 0x2e40 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/aws_iot_mqtt.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/aws_iot_mqtt.c.obj 
+/home/tux/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.1.2-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DUNITY_INCLUDE_CONFIG_H -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/tux/projects/tautuk_esp32s3_core/build/config -I/home/tux/projects/tautuk_esp32s3_core/main -I/home/tux/esp/v5.1.2/esp-idf/components/newlib/platform_include -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/esp_additions/include/freertos -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/esp_additions/include -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/esp_additions/arch/xtensa/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/include/soc -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/port/esp32s3/. -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/port/esp32s3/private_include -I/home/tux/esp/v5.1.2/esp-idf/components/heap/include -I/home/tux/esp/v5.1.2/esp-idf/components/log/include -I/home/tux/esp/v5.1.2/esp-idf/components/soc/include -I/home/tux/esp/v5.1.2/esp-idf/components/soc/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/soc/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/hal/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/hal/include -I/home/tux/esp/v5.1.2/esp-idf/components/hal/platform_port/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_rom/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_rom/include/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/esp_rom/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/esp_common/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_system/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_system/port/soc -I/home/tux/esp/v5.1.2/esp-idf/components/esp_system/port/include/private -I/home/tux/esp/v5.1.2/esp-idf/components/xtensa/include -I/home/tux/esp/v5.1.2/esp-idf/components/xtensa/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/include/apps -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/include/apps/sntp -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/lwip/src/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/port/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/port/freertos/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/port/esp32xx/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/tux/projects/tautuk_esp32s3_core/managed_components/espressif__esp_secure_cert_mgr/include -I/home/tux/esp/v5.1.2/esp-idf/components/spi_flash/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/port/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/library -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/tux/esp/v5.1.2/esp-idf/components/nvs_flash/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_partition/include -I/home/tux/esp/v5.1.2/esp-idf/components/efuse/include -I/home/tux/esp/v5.1.2/esp-idf/components/efuse/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_ringbuf/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/deprecated -I/home/tux/esp/v5.1.2/esp-idf/components/driver/analog_comparator/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/dac/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/gpio/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/gptimer/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/i2c/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/i2s/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/ledc/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/mcpwm/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/parlio/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/pcnt/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/rmt/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/sdio_slave/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/sdmmc/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/sigma_delta/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/spi/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/temperature_sensor/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/touch_sensor/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/twai/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/uart/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/usb_serial_jtag/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/touch_sensor/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_pm/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_app_format/include -I/home/tux/esp/v5.1.2/esp-idf/components/bootloader_support/include -I/home/tux/esp/v5.1.2/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/tux/esp/v5.1.2/esp-idf/components/app_update/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_mm/include -I/home/tux/esp/v5.1.2/esp-idf/components/pthread/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_timer/include -I/home/tux/esp/v5.1.2/esp-idf/components/app_trace/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_event/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_phy/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_phy/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/vfs/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_netif/include -I/home/tux/esp/v5.1.2/esp-idf/components/wpa_supplicant/include -I/home/tux/esp/v5.1.2/esp-idf/components/wpa_supplicant/port/include -I/home/tux/esp/v5.1.2/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_coex/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_wifi/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_wifi/wifi_apps/include -I/home/tux/esp/v5.1.2/esp-idf/components/unity/include -I/home/tux/esp/v5.1.2/esp-idf/components/unity/unity/src -I/home/tux/esp/v5.1.2/esp-idf/components/cmock/CMock/src -I/home/tux/esp/v5.1.2/esp-idf/components/console -I/home/tux/esp/v5.1.2/esp-idf/components/http_parser -I/home/tux/esp/v5.1.2/esp-idf/components/esp-tls -I/home/tux/esp/v5.1.2/esp-idf/components/esp-tls/esp-tls-crypto -I/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/interface -I/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/deprecated/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_eth/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_gdbstub/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hid/include -I/home/tux/esp/v5.1.2/esp-idf/components/tcp_transport/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_http_client/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_http_server/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_https_ota/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_psram/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_lcd/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_lcd/interface -I/home/tux/esp/v5.1.2/esp-idf/components/protobuf-c/protobuf-c -I/home/tux/esp/v5.1.2/esp-idf/components/protocomm/include/common -I/home/tux/esp/v5.1.2/esp-idf/components/protocomm/include/security -I/home/tux/esp/v5.1.2/esp-idf/components/protocomm/include/transports -I/home/tux/esp/v5.1.2/esp-idf/components/esp_local_ctrl/include -I/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/include -I/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/include/port/xtensa -I/home/tux/esp/v5.1.2/esp-idf/components/wear_levelling/include -I/home/tux/esp/v5.1.2/esp-idf/components/sdmmc/include -I/home/tux/esp/v5.1.2/esp-idf/components/fatfs/diskio -I/home/tux/esp/v5.1.2/esp-idf/components/fatfs/vfs -I/home/tux/esp/v5.1.2/esp-idf/components/fatfs/src -I/home/tux/esp/v5.1.2/esp-idf/components/idf_test/include -I/home/tux/esp/v5.1.2/esp-idf/components/idf_test/include/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/ieee802154/include -I/home/tux/esp/v5.1.2/esp-idf/components/json/cJSON -I/home/tux/esp/v5.1.2/esp-idf/components/mqtt/esp-mqtt/include -I/home/tux/esp/v5.1.2/esp-idf/components/perfmon/include -I/home/tux/esp/v5.1.2/esp-idf/components/spiffs/include -I/home/tux/esp/v5.1.2/esp-idf/components/touch_element/include -I/home/tux/esp/v5.1.2/esp-idf/components/ulp/ulp_common/include -I/home/tux/esp/v5.1.2/esp-idf/components/ulp/ulp_common/include/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/usb/include -I/home/tux/esp/v5.1.2/esp-idf/components/wifi_provisioning/include -I/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/include -I/home/tux/projects/tautuk_esp32s3_core/libraries/backoffAlgorithm/backoffAlgorithm/source/include -I/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/include -I/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/interface -I/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/config -I/home/tux/projects/tautuk_esp32s3_core/libraries/common/logging -I/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/port/network_transport -I/home/tux/projects/tautuk_esp32s3_core/libraries/common/posix_compat -mlongcalls  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=/home/tux/projects/tautuk_esp32s3_core=. -fmacro-prefix-map=/home/tux/esp/v5.1.2/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/aws_iot_mqtt.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/aws_iot_mqtt.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/aws_iot_mqtt.c.obj -c /home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c: In function 'aws_iot_demo_main':
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:65:13: error: storage class specified for parameter 'mqtt_payload'
+   65 | extern char mqtt_payload[256];
+      |             ^~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:69:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   69 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:75:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   75 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:98:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   98 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:245:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  245 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:271:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  271 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:284:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  284 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:294:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  294 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:316:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  316 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:392:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  392 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:424:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  424 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:444:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  444 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:524:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  524 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:618:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  618 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:697:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  697 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:719:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  719 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:761:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  761 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:804:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  804 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:862:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  862 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:916:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  916 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:1047:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ 1047 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:1094:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ 1094 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:1133:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ 1133 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:1239:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ 1239 | {
+      | ^
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:62:
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:686:5: error: old-style parameter declarations in prototyped function definition
+  686 | int aws_iot_demo_main( int argc, char ** argv )
+      |     ^~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:1330: error: expected '{' at end of input
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h: At top level:
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:467:17: warning: 'generateRandomNumber' declared 'static' but never defined [-Wunused-function]
+  467 | static uint32_t generateRandomNumber();
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:485:12: warning: 'connectToServerWithBackoffRetries' declared 'static' but never defined [-Wunused-function]
+  485 | static int connectToServerWithBackoffRetries( NetworkContext_t * pNetworkContext,
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:500:12: warning: 'subscribePublishLoop' declared 'static' but never defined [-Wunused-function]
+  500 | static int subscribePublishLoop( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:508:13: warning: 'handleIncomingPublish' declared 'static' but never defined [-Wunused-function]
+  508 | static void handleIncomingPublish( MQTTPublishInfo_t * pPublishInfo,
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:519:13: warning: 'eventCallback' declared 'static' but never defined [-Wunused-function]
+  519 | static void eventCallback( MQTTContext_t * pMqttContext,
+      |             ^~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:532:12: warning: 'initializeMqtt' declared 'static' but never defined [-Wunused-function]
+  532 | static int initializeMqtt( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:548:12: warning: 'establishMqttSession' declared 'static' but never defined [-Wunused-function]
+  548 | static int establishMqttSession( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:560:12: warning: 'disconnectMqttSession' declared 'static' but never defined [-Wunused-function]
+  560 | static int disconnectMqttSession( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:571:12: warning: 'subscribeToTopic' declared 'static' but never defined [-Wunused-function]
+  571 | static int subscribeToTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:582:12: warning: 'unsubscribeFromTopic' declared 'static' but never defined [-Wunused-function]
+  582 | static int unsubscribeFromTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:593:12: warning: 'publishToTopic' declared 'static' but never defined [-Wunused-function]
+  593 | static int publishToTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:605:12: warning: 'getNextFreeIndexForOutgoingPublishes' declared 'static' but never defined [-Wunused-function]
+  605 | static int getNextFreeIndexForOutgoingPublishes( uint8_t * pIndex );
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:613:13: warning: 'cleanupOutgoingPublishAt' declared 'static' but never defined [-Wunused-function]
+  613 | static void cleanupOutgoingPublishAt( uint8_t index );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:619:13: warning: 'cleanupOutgoingPublishes' declared 'static' but never defined [-Wunused-function]
+  619 | static void cleanupOutgoingPublishes( void );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:627:13: warning: 'cleanupOutgoingPublishWithPacketID' declared 'static' but never defined [-Wunused-function]
+  627 | static void cleanupOutgoingPublishWithPacketID( uint16_t packetId );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:636:12: warning: 'handlePublishResend' declared 'static' but never defined [-Wunused-function]
+  636 | static int handlePublishResend( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:645:13: warning: 'updateSubAckStatus' declared 'static' but never defined [-Wunused-function]
+  645 | static void updateSubAckStatus( MQTTPacketInfo_t * pPacketInfo );
+      |             ^~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:653:12: warning: 'handleResubscribe' declared 'static' but never defined [-Wunused-function]
+  653 | static int handleResubscribe( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:668:12: warning: 'waitForPacketAck' declared 'static' but never defined [-Wunused-function]
+  668 | static int waitForPacketAck( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:681:21: warning: 'processLoopWithTimeout' declared 'static' but never defined [-Wunused-function]
+  681 | static MQTTStatus_t processLoopWithTimeout( MQTTContext_t * pMqttContext,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:684:13: warning: 'cleanupESPSecureMgrCerts' declared 'static' but never defined [-Wunused-function]
+  684 | static void cleanupESPSecureMgrCerts( NetworkContext_t * pNetworkContext );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c: In function 'aws_iot_demo_main':
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c:1330: error: control reaches end of non-void function [-Werror=return-type]
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h: At top level:
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:459:26: warning: 'xTlsContextSemaphoreBuffer' defined but not used [-Wunused-variable]
+  459 | static StaticSemaphore_t xTlsContextSemaphoreBuffer;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:454:25: warning: 'pIncomingPublishRecords' defined but not used [-Wunused-variable]
+  454 | static MQTTPubAckInfo_t pIncomingPublishRecords[ INCOMING_PUBLISH_RECORD_LEN ];
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:445:25: warning: 'pOutgoingPublishRecords' defined but not used [-Wunused-variable]
+  445 | static MQTTPubAckInfo_t pOutgoingPublishRecords[ OUTGOING_PUBLISH_RECORD_LEN ];
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:436:27: warning: 'globalSubAckStatus' defined but not used [-Wunused-variable]
+  436 | static MQTTSubAckStatus_t globalSubAckStatus = MQTTSubAckFailure;
+      |                           ^~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:429:16: warning: 'buffer' defined but not used [-Wunused-variable]
+  429 | static uint8_t buffer[ NETWORK_BUFFER_SIZE ];
+      |                ^~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:424:28: warning: 'pGlobalSubscriptionList' defined but not used [-Wunused-variable]
+  424 | static MQTTSubscribeInfo_t pGlobalSubscriptionList[ 1 ];
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:418:25: warning: 'outgoingPublishPackets' defined but not used [-Wunused-variable]
+  418 | static PublishPackets_t outgoingPublishPackets[ MAX_OUTGOING_PUBLISHES ] = { 0 };
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:411:17: warning: 'globalUnsubscribePacketIdentifier' defined but not used [-Wunused-variable]
+  411 | static uint16_t globalUnsubscribePacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:404:17: warning: 'globalSubscribePacketIdentifier' defined but not used [-Wunused-variable]
+  404 | static uint16_t globalSubscribePacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:398:17: warning: 'globalAckPacketIdentifier' defined but not used [-Wunused-variable]
+  398 | static uint16_t globalAckPacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj 
+/home/tux/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.1.2-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DUNITY_INCLUDE_CONFIG_H -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/tux/projects/tautuk_esp32s3_core/build/config -I/home/tux/projects/tautuk_esp32s3_core/main -I/home/tux/esp/v5.1.2/esp-idf/components/newlib/platform_include -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/esp_additions/include/freertos -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/esp_additions/include -I/home/tux/esp/v5.1.2/esp-idf/components/freertos/esp_additions/arch/xtensa/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/include/soc -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/port/esp32s3/. -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/port/esp32s3/private_include -I/home/tux/esp/v5.1.2/esp-idf/components/heap/include -I/home/tux/esp/v5.1.2/esp-idf/components/log/include -I/home/tux/esp/v5.1.2/esp-idf/components/soc/include -I/home/tux/esp/v5.1.2/esp-idf/components/soc/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/soc/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/hal/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/hal/include -I/home/tux/esp/v5.1.2/esp-idf/components/hal/platform_port/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_rom/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_rom/include/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/esp_rom/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/esp_common/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_system/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_system/port/soc -I/home/tux/esp/v5.1.2/esp-idf/components/esp_system/port/include/private -I/home/tux/esp/v5.1.2/esp-idf/components/xtensa/include -I/home/tux/esp/v5.1.2/esp-idf/components/xtensa/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/include/apps -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/include/apps/sntp -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/lwip/src/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/port/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/port/freertos/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/port/esp32xx/include -I/home/tux/esp/v5.1.2/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/tux/projects/tautuk_esp32s3_core/managed_components/espressif__esp_secure_cert_mgr/include -I/home/tux/esp/v5.1.2/esp-idf/components/spi_flash/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/port/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/library -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/tux/esp/v5.1.2/esp-idf/components/nvs_flash/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_partition/include -I/home/tux/esp/v5.1.2/esp-idf/components/efuse/include -I/home/tux/esp/v5.1.2/esp-idf/components/efuse/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_ringbuf/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/deprecated -I/home/tux/esp/v5.1.2/esp-idf/components/driver/analog_comparator/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/dac/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/gpio/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/gptimer/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/i2c/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/i2s/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/ledc/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/mcpwm/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/parlio/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/pcnt/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/rmt/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/sdio_slave/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/sdmmc/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/sigma_delta/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/spi/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/temperature_sensor/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/touch_sensor/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/twai/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/uart/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/usb_serial_jtag/include -I/home/tux/esp/v5.1.2/esp-idf/components/driver/touch_sensor/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_pm/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_app_format/include -I/home/tux/esp/v5.1.2/esp-idf/components/bootloader_support/include -I/home/tux/esp/v5.1.2/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/tux/esp/v5.1.2/esp-idf/components/app_update/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_mm/include -I/home/tux/esp/v5.1.2/esp-idf/components/pthread/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_timer/include -I/home/tux/esp/v5.1.2/esp-idf/components/app_trace/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_event/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_phy/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_phy/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/vfs/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_netif/include -I/home/tux/esp/v5.1.2/esp-idf/components/wpa_supplicant/include -I/home/tux/esp/v5.1.2/esp-idf/components/wpa_supplicant/port/include -I/home/tux/esp/v5.1.2/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_coex/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_wifi/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_wifi/wifi_apps/include -I/home/tux/esp/v5.1.2/esp-idf/components/unity/include -I/home/tux/esp/v5.1.2/esp-idf/components/unity/unity/src -I/home/tux/esp/v5.1.2/esp-idf/components/cmock/CMock/src -I/home/tux/esp/v5.1.2/esp-idf/components/console -I/home/tux/esp/v5.1.2/esp-idf/components/http_parser -I/home/tux/esp/v5.1.2/esp-idf/components/esp-tls -I/home/tux/esp/v5.1.2/esp-idf/components/esp-tls/esp-tls-crypto -I/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/interface -I/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/esp32s3/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/deprecated/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_eth/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_gdbstub/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_hid/include -I/home/tux/esp/v5.1.2/esp-idf/components/tcp_transport/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_http_client/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_http_server/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_https_ota/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_psram/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_lcd/include -I/home/tux/esp/v5.1.2/esp-idf/components/esp_lcd/interface -I/home/tux/esp/v5.1.2/esp-idf/components/protobuf-c/protobuf-c -I/home/tux/esp/v5.1.2/esp-idf/components/protocomm/include/common -I/home/tux/esp/v5.1.2/esp-idf/components/protocomm/include/security -I/home/tux/esp/v5.1.2/esp-idf/components/protocomm/include/transports -I/home/tux/esp/v5.1.2/esp-idf/components/esp_local_ctrl/include -I/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/include -I/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/include/port/xtensa -I/home/tux/esp/v5.1.2/esp-idf/components/wear_levelling/include -I/home/tux/esp/v5.1.2/esp-idf/components/sdmmc/include -I/home/tux/esp/v5.1.2/esp-idf/components/fatfs/diskio -I/home/tux/esp/v5.1.2/esp-idf/components/fatfs/vfs -I/home/tux/esp/v5.1.2/esp-idf/components/fatfs/src -I/home/tux/esp/v5.1.2/esp-idf/components/idf_test/include -I/home/tux/esp/v5.1.2/esp-idf/components/idf_test/include/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/ieee802154/include -I/home/tux/esp/v5.1.2/esp-idf/components/json/cJSON -I/home/tux/esp/v5.1.2/esp-idf/components/mqtt/esp-mqtt/include -I/home/tux/esp/v5.1.2/esp-idf/components/perfmon/include -I/home/tux/esp/v5.1.2/esp-idf/components/spiffs/include -I/home/tux/esp/v5.1.2/esp-idf/components/touch_element/include -I/home/tux/esp/v5.1.2/esp-idf/components/ulp/ulp_common/include -I/home/tux/esp/v5.1.2/esp-idf/components/ulp/ulp_common/include/esp32s3 -I/home/tux/esp/v5.1.2/esp-idf/components/usb/include -I/home/tux/esp/v5.1.2/esp-idf/components/wifi_provisioning/include -I/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/include -I/home/tux/projects/tautuk_esp32s3_core/libraries/backoffAlgorithm/backoffAlgorithm/source/include -I/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/include -I/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/interface -I/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/config -I/home/tux/projects/tautuk_esp32s3_core/libraries/common/logging -I/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/port/network_transport -I/home/tux/projects/tautuk_esp32s3_core/libraries/common/posix_compat -mlongcalls  -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fmacro-prefix-map=/home/tux/projects/tautuk_esp32s3_core=. -fmacro-prefix-map=/home/tux/esp/v5.1.2/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -DconfigENABLE_FREERTOS_DEBUG_OCDAWARE=1 -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj -c /home/tux/projects/tautuk_esp32s3_core/main/app_main.c
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c: In function 'aws_iot_demo_main':
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:28:20: error: storage class specified for parameter 'TAG'
+   28 | static const char *TAG = "TauTuk";
+      |                    ^~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:28:1: error: parameter 'TAG' is initialized
+   28 | static const char *TAG = "TauTuk";
+      | ^~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:49:1: error: parameter 'CO' is initialized
+   49 | float CO        = 0.0;
+      | ^~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:50:1: error: parameter 'Alcohol' is initialized
+   50 | float Alcohol   = 0.0;
+      | ^~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:51:1: error: parameter 'CO2' is initialized
+   51 | float CO2       = 0.0;
+      | ^~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:52:1: error: parameter 'Toluen' is initialized
+   52 | float Toluen    = 0.0;
+      | ^~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:53:1: error: parameter 'NH4' is initialized
+   53 | float NH4       = 0.0;
+      | ^~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:54:1: error: parameter 'Aceton' is initialized
+   54 | float Aceton    = 0.0;
+      | ^~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:56:16: error: storage class specified for parameter 's_led_state'
+   56 | static uint8_t s_led_state = 0;
+      |                ^~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:56:1: error: parameter 's_led_state' is initialized
+   56 | static uint8_t s_led_state = 0;
+      | ^~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:58:1: error: parameter 'id' is initialized
+   58 | char id[10] = "#tt0000001";
+      | ^~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:59:1: error: parameter 'mqtt_payload' is initialized
+   59 | char mqtt_payload[256] = "";
+      | ^~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:61:13: error: storage class specified for parameter 'blink_led'
+   61 | static void blink_led(void);
+      |             ^~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:62:13: error: storage class specified for parameter 'configure_led'
+   62 | static void configure_led(void);
+      |             ^~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:63:12: error: storage class specified for parameter 'read_sensor'
+   63 | static int read_sensor(void);
+      |            ^~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:64:13: error: storage class specified for parameter 'createStringFromJson'
+   64 | static void createStringFromJson(char *str);
+      |             ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:69:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   69 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:75:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   75 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:83:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   83 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:100:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  100 | {
+      | ^
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:151:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  151 | {
+      | ^
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/app_main.c:26:
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:686:5: error: old-style parameter declarations in prototyped function definition
+  686 | int aws_iot_demo_main( int argc, char ** argv )
+      |     ^~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:249: error: expected '{' at end of input
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/app_main.c:25:
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h: At top level:
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h:14:15: warning: 'app_adc_calibration_init' declared 'static' but never defined [-Wunused-function]
+   14 |   static bool app_adc_calibration_init(adc_unit_t unit, adc_channel_t channel, adc_atten_t atten, adc_cali_handle_t *out_handle);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h:15:15: warning: 'app_adc_calibration_deinit' declared 'static' but never defined [-Wunused-function]
+   15 |   static void app_adc_calibration_deinit(adc_cali_handle_t handle);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:467:17: warning: 'generateRandomNumber' declared 'static' but never defined [-Wunused-function]
+  467 | static uint32_t generateRandomNumber();
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:485:12: warning: 'connectToServerWithBackoffRetries' declared 'static' but never defined [-Wunused-function]
+  485 | static int connectToServerWithBackoffRetries( NetworkContext_t * pNetworkContext,
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:500:12: warning: 'subscribePublishLoop' declared 'static' but never defined [-Wunused-function]
+  500 | static int subscribePublishLoop( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:508:13: warning: 'handleIncomingPublish' declared 'static' but never defined [-Wunused-function]
+  508 | static void handleIncomingPublish( MQTTPublishInfo_t * pPublishInfo,
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:519:13: warning: 'eventCallback' declared 'static' but never defined [-Wunused-function]
+  519 | static void eventCallback( MQTTContext_t * pMqttContext,
+      |             ^~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:532:12: warning: 'initializeMqtt' declared 'static' but never defined [-Wunused-function]
+  532 | static int initializeMqtt( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:548:12: warning: 'establishMqttSession' declared 'static' but never defined [-Wunused-function]
+  548 | static int establishMqttSession( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:560:12: warning: 'disconnectMqttSession' declared 'static' but never defined [-Wunused-function]
+  560 | static int disconnectMqttSession( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:571:12: warning: 'subscribeToTopic' declared 'static' but never defined [-Wunused-function]
+  571 | static int subscribeToTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:582:12: warning: 'unsubscribeFromTopic' declared 'static' but never defined [-Wunused-function]
+  582 | static int unsubscribeFromTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:593:12: warning: 'publishToTopic' declared 'static' but never defined [-Wunused-function]
+  593 | static int publishToTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:605:12: warning: 'getNextFreeIndexForOutgoingPublishes' declared 'static' but never defined [-Wunused-function]
+  605 | static int getNextFreeIndexForOutgoingPublishes( uint8_t * pIndex );
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:613:13: warning: 'cleanupOutgoingPublishAt' declared 'static' but never defined [-Wunused-function]
+  613 | static void cleanupOutgoingPublishAt( uint8_t index );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:619:13: warning: 'cleanupOutgoingPublishes' declared 'static' but never defined [-Wunused-function]
+  619 | static void cleanupOutgoingPublishes( void );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:627:13: warning: 'cleanupOutgoingPublishWithPacketID' declared 'static' but never defined [-Wunused-function]
+  627 | static void cleanupOutgoingPublishWithPacketID( uint16_t packetId );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:636:12: warning: 'handlePublishResend' declared 'static' but never defined [-Wunused-function]
+  636 | static int handlePublishResend( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:645:13: warning: 'updateSubAckStatus' declared 'static' but never defined [-Wunused-function]
+  645 | static void updateSubAckStatus( MQTTPacketInfo_t * pPacketInfo );
+      |             ^~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:653:12: warning: 'handleResubscribe' declared 'static' but never defined [-Wunused-function]
+  653 | static int handleResubscribe( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:668:12: warning: 'waitForPacketAck' declared 'static' but never defined [-Wunused-function]
+  668 | static int waitForPacketAck( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:681:21: warning: 'processLoopWithTimeout' declared 'static' but never defined [-Wunused-function]
+  681 | static MQTTStatus_t processLoopWithTimeout( MQTTContext_t * pMqttContext,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:684:13: warning: 'cleanupESPSecureMgrCerts' declared 'static' but never defined [-Wunused-function]
+  684 | static void cleanupESPSecureMgrCerts( NetworkContext_t * pNetworkContext );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c: In function 'aws_iot_demo_main':
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:249: error: control reaches end of non-void function [-Werror=return-type]
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h: At top level:
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:459:26: warning: 'xTlsContextSemaphoreBuffer' defined but not used [-Wunused-variable]
+  459 | static StaticSemaphore_t xTlsContextSemaphoreBuffer;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:454:25: warning: 'pIncomingPublishRecords' defined but not used [-Wunused-variable]
+  454 | static MQTTPubAckInfo_t pIncomingPublishRecords[ INCOMING_PUBLISH_RECORD_LEN ];
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:445:25: warning: 'pOutgoingPublishRecords' defined but not used [-Wunused-variable]
+  445 | static MQTTPubAckInfo_t pOutgoingPublishRecords[ OUTGOING_PUBLISH_RECORD_LEN ];
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:436:27: warning: 'globalSubAckStatus' defined but not used [-Wunused-variable]
+  436 | static MQTTSubAckStatus_t globalSubAckStatus = MQTTSubAckFailure;
+      |                           ^~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:429:16: warning: 'buffer' defined but not used [-Wunused-variable]
+  429 | static uint8_t buffer[ NETWORK_BUFFER_SIZE ];
+      |                ^~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:424:28: warning: 'pGlobalSubscriptionList' defined but not used [-Wunused-variable]
+  424 | static MQTTSubscribeInfo_t pGlobalSubscriptionList[ 1 ];
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:418:25: warning: 'outgoingPublishPackets' defined but not used [-Wunused-variable]
+  418 | static PublishPackets_t outgoingPublishPackets[ MAX_OUTGOING_PUBLISHES ] = { 0 };
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:411:17: warning: 'globalUnsubscribePacketIdentifier' defined but not used [-Wunused-variable]
+  411 | static uint16_t globalUnsubscribePacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:404:17: warning: 'globalSubscribePacketIdentifier' defined but not used [-Wunused-variable]
+  404 | static uint16_t globalSubscribePacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:398:17: warning: 'globalAckPacketIdentifier' defined but not used [-Wunused-variable]
+  398 | static uint16_t globalAckPacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+ninja: build stopped: subcommand failed.

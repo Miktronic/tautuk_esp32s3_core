@@ -1,0 +1,126 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/tux/projects/tautuk_esp32s3_core/build/bootloader/esp-idf/esptool_py && /home/tux/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/tux/esp/v5.1.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/tux/projects/tautuk_esp32s3_core/build/bootloader/bootloader.bin
+Bootloader binary size 0x51c0 bytes. 0x2e40 bytes (36%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c: In function 'app_main':
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:257:17: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  257 |     xTaskCreate(&aws_iot_demo_main, "aws_iot_mqtt", 4096, NULL, 0, NULL);
+      |                 ^~~~~~~~~~~~~~~~~~
+      |                 |
+      |                 int (*)(int,  char **)
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/app_main.c:14:
+/home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:588:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'int (*)(int,  char **)'
+  588 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/app_main.c:25:
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h: At top level:
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h:14:15: warning: 'app_adc_calibration_init' declared 'static' but never defined [-Wunused-function]
+   14 |   static bool app_adc_calibration_init(adc_unit_t unit, adc_channel_t channel, adc_atten_t atten, adc_cali_handle_t *out_handle);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h:15:15: warning: 'app_adc_calibration_deinit' declared 'static' but never defined [-Wunused-function]
+   15 |   static void app_adc_calibration_deinit(adc_cali_handle_t handle);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/app_main.c:26:
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:468:17: warning: 'generateRandomNumber' declared 'static' but never defined [-Wunused-function]
+  468 | static uint32_t generateRandomNumber();
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:486:12: warning: 'connectToServerWithBackoffRetries' declared 'static' but never defined [-Wunused-function]
+  486 | static int connectToServerWithBackoffRetries( NetworkContext_t * pNetworkContext,
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:501:12: warning: 'subscribePublishLoop' declared 'static' but never defined [-Wunused-function]
+  501 | static int subscribePublishLoop( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:509:13: warning: 'handleIncomingPublish' declared 'static' but never defined [-Wunused-function]
+  509 | static void handleIncomingPublish( MQTTPublishInfo_t * pPublishInfo,
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:520:13: warning: 'eventCallback' declared 'static' but never defined [-Wunused-function]
+  520 | static void eventCallback( MQTTContext_t * pMqttContext,
+      |             ^~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:533:12: warning: 'initializeMqtt' declared 'static' but never defined [-Wunused-function]
+  533 | static int initializeMqtt( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:549:12: warning: 'establishMqttSession' declared 'static' but never defined [-Wunused-function]
+  549 | static int establishMqttSession( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:561:12: warning: 'disconnectMqttSession' declared 'static' but never defined [-Wunused-function]
+  561 | static int disconnectMqttSession( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:572:12: warning: 'subscribeToTopic' declared 'static' but never defined [-Wunused-function]
+  572 | static int subscribeToTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:583:12: warning: 'unsubscribeFromTopic' declared 'static' but never defined [-Wunused-function]
+  583 | static int unsubscribeFromTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:594:12: warning: 'publishToTopic' declared 'static' but never defined [-Wunused-function]
+  594 | static int publishToTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:606:12: warning: 'getNextFreeIndexForOutgoingPublishes' declared 'static' but never defined [-Wunused-function]
+  606 | static int getNextFreeIndexForOutgoingPublishes( uint8_t * pIndex );
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:614:13: warning: 'cleanupOutgoingPublishAt' declared 'static' but never defined [-Wunused-function]
+  614 | static void cleanupOutgoingPublishAt( uint8_t index );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:620:13: warning: 'cleanupOutgoingPublishes' declared 'static' but never defined [-Wunused-function]
+  620 | static void cleanupOutgoingPublishes( void );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:628:13: warning: 'cleanupOutgoingPublishWithPacketID' declared 'static' but never defined [-Wunused-function]
+  628 | static void cleanupOutgoingPublishWithPacketID( uint16_t packetId );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:637:12: warning: 'handlePublishResend' declared 'static' but never defined [-Wunused-function]
+  637 | static int handlePublishResend( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:646:13: warning: 'updateSubAckStatus' declared 'static' but never defined [-Wunused-function]
+  646 | static void updateSubAckStatus( MQTTPacketInfo_t * pPacketInfo );
+      |             ^~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:654:12: warning: 'handleResubscribe' declared 'static' but never defined [-Wunused-function]
+  654 | static int handleResubscribe( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:669:12: warning: 'waitForPacketAck' declared 'static' but never defined [-Wunused-function]
+  669 | static int waitForPacketAck( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:682:21: warning: 'processLoopWithTimeout' declared 'static' but never defined [-Wunused-function]
+  682 | static MQTTStatus_t processLoopWithTimeout( MQTTContext_t * pMqttContext,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:685:13: warning: 'cleanupESPSecureMgrCerts' declared 'static' but never defined [-Wunused-function]
+  685 | static void cleanupESPSecureMgrCerts( NetworkContext_t * pNetworkContext );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:82:13: warning: 'createStringFromJson' defined but not used [-Wunused-function]
+   82 | static void createStringFromJson(char *str)
+      |             ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:68:13: warning: 'blink_led' defined but not used [-Wunused-function]
+   68 | static void blink_led(void)
+      |             ^~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:460:26: warning: 'xTlsContextSemaphoreBuffer' defined but not used [-Wunused-variable]
+  460 | static StaticSemaphore_t xTlsContextSemaphoreBuffer;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:455:25: warning: 'pIncomingPublishRecords' defined but not used [-Wunused-variable]
+  455 | static MQTTPubAckInfo_t pIncomingPublishRecords[ INCOMING_PUBLISH_RECORD_LEN ];
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:446:25: warning: 'pOutgoingPublishRecords' defined but not used [-Wunused-variable]
+  446 | static MQTTPubAckInfo_t pOutgoingPublishRecords[ OUTGOING_PUBLISH_RECORD_LEN ];
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:437:27: warning: 'globalSubAckStatus' defined but not used [-Wunused-variable]
+  437 | static MQTTSubAckStatus_t globalSubAckStatus = MQTTSubAckFailure;
+      |                           ^~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:430:16: warning: 'buffer' defined but not used [-Wunused-variable]
+  430 | static uint8_t buffer[ NETWORK_BUFFER_SIZE ];
+      |                ^~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:425:28: warning: 'pGlobalSubscriptionList' defined but not used [-Wunused-variable]
+  425 | static MQTTSubscribeInfo_t pGlobalSubscriptionList[ 1 ];
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:419:25: warning: 'outgoingPublishPackets' defined but not used [-Wunused-variable]
+  419 | static PublishPackets_t outgoingPublishPackets[ MAX_OUTGOING_PUBLISHES ] = { 0 };
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:412:17: warning: 'globalUnsubscribePacketIdentifier' defined but not used [-Wunused-variable]
+  412 | static uint16_t globalUnsubscribePacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:405:17: warning: 'globalSubscribePacketIdentifier' defined but not used [-Wunused-variable]
+  405 | static uint16_t globalSubscribePacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:399:17: warning: 'globalAckPacketIdentifier' defined but not used [-Wunused-variable]
+  399 | static uint16_t globalAckPacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/aws_iot_mqtt.c.obj
+[6/11] Linking C static library esp-idf/main/libmain.a

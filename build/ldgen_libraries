@@ -62,4 +62,9 @@
 /home/tux/projects/tautuk_esp32s3_core/build/esp-idf/ulp/libulp.a
 /home/tux/projects/tautuk_esp32s3_core/build/esp-idf/usb/libusb.a
 /home/tux/projects/tautuk_esp32s3_core/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
+/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/espressif__esp_secure_cert_mgr/libespressif__esp_secure_cert_mgr.a
 /home/tux/projects/tautuk_esp32s3_core/build/esp-idf/main/libmain.a
+/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a
+/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/backoffAlgorithm/libbackoffAlgorithm.a
+/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/coreMQTT/libcoreMQTT.a
+/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/posix_compat/libposix_compat.a

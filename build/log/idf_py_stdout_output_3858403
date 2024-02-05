@@ -1,0 +1,201 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/tux/projects/tautuk_esp32s3_core/build/bootloader/esp-idf/esptool_py && /home/tux/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/tux/esp/v5.1.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/tux/projects/tautuk_esp32s3_core/build/bootloader/bootloader.bin
+Bootloader binary size 0x51c0 bytes. 0x2e40 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c: In function 'app_main':
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:250:17: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  250 |     xTaskCreate(&aws_iot_demo_main, "aws_iot_mqtt", 4096, NULL, 0, NULL);
+      |                 ^~~~~~~~~~~~~~~~~~
+      |                 |
+      |                 int (*)(int,  char **)
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/app_main.c:14:
+/home/tux/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:588:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'int (*)(int,  char **)'
+  588 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/app_main.c:25:
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h: At top level:
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h:14:15: warning: 'app_adc_calibration_init' declared 'static' but never defined [-Wunused-function]
+   14 |   static bool app_adc_calibration_init(adc_unit_t unit, adc_channel_t channel, adc_atten_t atten, adc_cali_handle_t *out_handle);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.h:15:15: warning: 'app_adc_calibration_deinit' declared 'static' but never defined [-Wunused-function]
+   15 |   static void app_adc_calibration_deinit(adc_cali_handle_t handle);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /home/tux/projects/tautuk_esp32s3_core/main/app_main.c:26:
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:467:17: warning: 'generateRandomNumber' declared 'static' but never defined [-Wunused-function]
+  467 | static uint32_t generateRandomNumber();
+      |                 ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:485:12: warning: 'connectToServerWithBackoffRetries' declared 'static' but never defined [-Wunused-function]
+  485 | static int connectToServerWithBackoffRetries( NetworkContext_t * pNetworkContext,
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:500:12: warning: 'subscribePublishLoop' declared 'static' but never defined [-Wunused-function]
+  500 | static int subscribePublishLoop( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:508:13: warning: 'handleIncomingPublish' declared 'static' but never defined [-Wunused-function]
+  508 | static void handleIncomingPublish( MQTTPublishInfo_t * pPublishInfo,
+      |             ^~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:519:13: warning: 'eventCallback' declared 'static' but never defined [-Wunused-function]
+  519 | static void eventCallback( MQTTContext_t * pMqttContext,
+      |             ^~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:532:12: warning: 'initializeMqtt' declared 'static' but never defined [-Wunused-function]
+  532 | static int initializeMqtt( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:548:12: warning: 'establishMqttSession' declared 'static' but never defined [-Wunused-function]
+  548 | static int establishMqttSession( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:560:12: warning: 'disconnectMqttSession' declared 'static' but never defined [-Wunused-function]
+  560 | static int disconnectMqttSession( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:571:12: warning: 'subscribeToTopic' declared 'static' but never defined [-Wunused-function]
+  571 | static int subscribeToTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:582:12: warning: 'unsubscribeFromTopic' declared 'static' but never defined [-Wunused-function]
+  582 | static int unsubscribeFromTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:593:12: warning: 'publishToTopic' declared 'static' but never defined [-Wunused-function]
+  593 | static int publishToTopic( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:605:12: warning: 'getNextFreeIndexForOutgoingPublishes' declared 'static' but never defined [-Wunused-function]
+  605 | static int getNextFreeIndexForOutgoingPublishes( uint8_t * pIndex );
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:613:13: warning: 'cleanupOutgoingPublishAt' declared 'static' but never defined [-Wunused-function]
+  613 | static void cleanupOutgoingPublishAt( uint8_t index );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:619:13: warning: 'cleanupOutgoingPublishes' declared 'static' but never defined [-Wunused-function]
+  619 | static void cleanupOutgoingPublishes( void );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:627:13: warning: 'cleanupOutgoingPublishWithPacketID' declared 'static' but never defined [-Wunused-function]
+  627 | static void cleanupOutgoingPublishWithPacketID( uint16_t packetId );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:636:12: warning: 'handlePublishResend' declared 'static' but never defined [-Wunused-function]
+  636 | static int handlePublishResend( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:645:13: warning: 'updateSubAckStatus' declared 'static' but never defined [-Wunused-function]
+  645 | static void updateSubAckStatus( MQTTPacketInfo_t * pPacketInfo );
+      |             ^~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:653:12: warning: 'handleResubscribe' declared 'static' but never defined [-Wunused-function]
+  653 | static int handleResubscribe( MQTTContext_t * pMqttContext );
+      |            ^~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:668:12: warning: 'waitForPacketAck' declared 'static' but never defined [-Wunused-function]
+  668 | static int waitForPacketAck( MQTTContext_t * pMqttContext,
+      |            ^~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:681:21: warning: 'processLoopWithTimeout' declared 'static' but never defined [-Wunused-function]
+  681 | static MQTTStatus_t processLoopWithTimeout( MQTTContext_t * pMqttContext,
+      |                     ^~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:684:13: warning: 'cleanupESPSecureMgrCerts' declared 'static' but never defined [-Wunused-function]
+  684 | static void cleanupESPSecureMgrCerts( NetworkContext_t * pNetworkContext );
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/app_main.c:68:13: warning: 'blink_led' defined but not used [-Wunused-function]
+   68 | static void blink_led(void)
+      |             ^~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:459:26: warning: 'xTlsContextSemaphoreBuffer' defined but not used [-Wunused-variable]
+  459 | static StaticSemaphore_t xTlsContextSemaphoreBuffer;
+      |                          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:454:25: warning: 'pIncomingPublishRecords' defined but not used [-Wunused-variable]
+  454 | static MQTTPubAckInfo_t pIncomingPublishRecords[ INCOMING_PUBLISH_RECORD_LEN ];
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:445:25: warning: 'pOutgoingPublishRecords' defined but not used [-Wunused-variable]
+  445 | static MQTTPubAckInfo_t pOutgoingPublishRecords[ OUTGOING_PUBLISH_RECORD_LEN ];
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:436:27: warning: 'globalSubAckStatus' defined but not used [-Wunused-variable]
+  436 | static MQTTSubAckStatus_t globalSubAckStatus = MQTTSubAckFailure;
+      |                           ^~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:429:16: warning: 'buffer' defined but not used [-Wunused-variable]
+  429 | static uint8_t buffer[ NETWORK_BUFFER_SIZE ];
+      |                ^~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:424:28: warning: 'pGlobalSubscriptionList' defined but not used [-Wunused-variable]
+  424 | static MQTTSubscribeInfo_t pGlobalSubscriptionList[ 1 ];
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:418:25: warning: 'outgoingPublishPackets' defined but not used [-Wunused-variable]
+  418 | static PublishPackets_t outgoingPublishPackets[ MAX_OUTGOING_PUBLISHES ] = { 0 };
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:411:17: warning: 'globalUnsubscribePacketIdentifier' defined but not used [-Wunused-variable]
+  411 | static uint16_t globalUnsubscribePacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:404:17: warning: 'globalSubscribePacketIdentifier' defined but not used [-Wunused-variable]
+  404 | static uint16_t globalSubscribePacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.h:398:17: warning: 'globalAckPacketIdentifier' defined but not used [-Wunused-variable]
+  398 | static uint16_t globalAckPacketIdentifier = 0U;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable tautek_esp32s3_core.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated /home/tux/projects/tautuk_esp32s3_core/build/tautek_esp32s3_core.bin
+[9/10] cd /home/tux/projects/tautuk_esp32s3_core/build/esp-idf/esptool_py && /home/tux/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/tux/esp/v5.1.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tux/projects/tautuk_esp32s3_core/build/partition_table/partition-table.bin /home/tux/projects/tautuk_esp32s3_core/build/tautek_esp32s3_core.bin
+tautek_esp32s3_core.bin binary size 0xe4bc0 bytes. Smallest app partition is 0x100000 bytes. 0x1b440 bytes (11%) free.
+[9/10] cd /home/tux/esp/v5.1.2/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/tux/esp/v5.1.2/esp-idf -D "SERIAL_TOOL=/home/tux/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/home/tux/esp/v5.1.2/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/tux/projects/tautuk_esp32s3_core/build -P /home/tux/esp/v5.1.2/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 tautek_esp32s3_core.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded Flash 8MB (GD)
+Crystal is 40MHz
+MAC: f4:12:fa:65:70:08
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000f4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20928 bytes to 13296...
+Writing at 0x00000000... (100 %)
+Wrote 20928 bytes (13296 compressed) at 0x00000000 in 0.6 seconds (effective 293.9 kbit/s)...
+Hash of data verified.
+Compressed 936896 bytes to 591726...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001ad4b... (5 %)
+Writing at 0x00025747... (8 %)
+Writing at 0x0002a408... (10 %)
+Writing at 0x00033fbc... (13 %)
+Writing at 0x0003fc98... (16 %)
+Writing at 0x00045a42... (18 %)
+Writing at 0x0004bf62... (21 %)
+Writing at 0x00052137... (24 %)
+Writing at 0x00058031... (27 %)
+Writing at 0x0005dba4... (29 %)
+Writing at 0x000635bb... (32 %)
+Writing at 0x00069b83... (35 %)
+Writing at 0x0006f5bb... (37 %)
+Writing at 0x0007507e... (40 %)
+Writing at 0x0007a2c8... (43 %)
+Writing at 0x0007f293... (45 %)
+Writing at 0x000843fb... (48 %)
+Writing at 0x00089508... (51 %)
+Writing at 0x0008e8f7... (54 %)
+Writing at 0x00093b65... (56 %)
+Writing at 0x00099dd4... (59 %)
+Writing at 0x0009f6a8... (62 %)
+Writing at 0x000a4b4c... (64 %)
+Writing at 0x000aa39f... (67 %)
+Writing at 0x000afe1f... (70 %)
+Writing at 0x000b544d... (72 %)
+Writing at 0x000bae44... (75 %)
+Writing at 0x000c08cb... (78 %)
+Writing at 0x000c5e54... (81 %)
+Writing at 0x000cc397... (83 %)
+Writing at 0x000d4510... (86 %)
+Writing at 0x000dce19... (89 %)
+Writing at 0x000e2bce... (91 %)
+Writing at 0x000e88f7... (94 %)
+Writing at 0x000ee8fd... (97 %)
+Writing at 0x000f3e76... (100 %)
+Wrote 936896 bytes (591726 compressed) at 0x00010000 in 13.5 seconds (effective 557.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 556.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

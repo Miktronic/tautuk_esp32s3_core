@@ -1,0 +1,74 @@
+[1/5] cd /home/tux/projects/tautuk_esp32s3_core/build/esp-idf/esptool_py && /home/tux/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/tux/esp/v5.1.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/tux/projects/tautuk_esp32s3_core/build/partition_table/partition-table.bin /home/tux/projects/tautuk_esp32s3_core/build/tautek_esp32s3_core.bin
+tautek_esp32s3_core.bin binary size 0xdd390 bytes. Smallest app partition is 0x100000 bytes. 0x22c70 bytes (14%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/tux/projects/tautuk_esp32s3_core/build/bootloader/esp-idf/esptool_py && /home/tux/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/tux/esp/v5.1.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/tux/projects/tautuk_esp32s3_core/build/bootloader/bootloader.bin
+Bootloader binary size 0x51c0 bytes. 0x2e40 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/tux/esp/v5.1.2/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/tux/esp/v5.1.2/esp-idf -D "SERIAL_TOOL=/home/tux/.espressif/python_env/idf5.1_py3.10_env/bin/python;;/home/tux/esp/v5.1.2/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/tux/projects/tautuk_esp32s3_core/build -P /home/tux/esp/v5.1.2/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 tautek_esp32s3_core.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded Flash 8MB (GD)
+Crystal is 40MHz
+MAC: f4:12:fa:65:70:08
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000edfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 20928 bytes to 13296...
+Writing at 0x00000000... (100 %)
+Wrote 20928 bytes (13296 compressed) at 0x00000000 in 0.6 seconds (effective 293.4 kbit/s)...
+Hash of data verified.
+Compressed 906128 bytes to 571488...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001ad34... (5 %)
+Writing at 0x00025742... (8 %)
+Writing at 0x0002a408... (11 %)
+Writing at 0x00033ffd... (14 %)
+Writing at 0x0003fa78... (17 %)
+Writing at 0x00045647... (20 %)
+Writing at 0x0004bbda... (22 %)
+Writing at 0x00051fd1... (25 %)
+Writing at 0x00057d0d... (28 %)
+Writing at 0x0005d889... (31 %)
+Writing at 0x00063304... (34 %)
+Writing at 0x000698bc... (37 %)
+Writing at 0x0006f1bb... (40 %)
+Writing at 0x00074c5e... (42 %)
+Writing at 0x00079d96... (45 %)
+Writing at 0x0007ed81... (48 %)
+Writing at 0x00083f53... (51 %)
+Writing at 0x00089082... (54 %)
+Writing at 0x0008e4b7... (57 %)
+Writing at 0x00093877... (60 %)
+Writing at 0x00099b42... (62 %)
+Writing at 0x0009f2e5... (65 %)
+Writing at 0x000a4824... (68 %)
+Writing at 0x000aa08a... (71 %)
+Writing at 0x000afa9e... (74 %)
+Writing at 0x000b512b... (77 %)
+Writing at 0x000baa8b... (80 %)
+Writing at 0x000c0638... (82 %)
+Writing at 0x000c5c88... (85 %)
+Writing at 0x000ce7fa... (88 %)
+Writing at 0x000d6d34... (91 %)
+Writing at 0x000dc86f... (94 %)
+Writing at 0x000e27d3... (97 %)
+Writing at 0x000e853c... (100 %)
+Wrote 906128 bytes (571488 compressed) at 0x00010000 in 12.9 seconds (effective 560.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 510.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

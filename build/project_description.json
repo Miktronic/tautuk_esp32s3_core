@@ -1,15 +1,15 @@
 {
     "version":            "1",
-    "project_name":       "hello_world",
-    "project_version":    "bc43c6b",
+    "project_name":       "tautek_esp32s3_core",
+    "project_version":    "a31d4bd-dirty",
     "project_path":       "/home/tux/projects/tautuk_esp32s3_core",
     "idf_path":           "/home/tux/esp/v5.1.2/esp-idf",
     "build_dir":          "/home/tux/projects/tautuk_esp32s3_core/build",
     "config_file":        "/home/tux/projects/tautuk_esp32s3_core/sdkconfig",
     "config_defaults":    "",
     "bootloader_elf":     "/home/tux/projects/tautuk_esp32s3_core/build/bootloader/bootloader.elf",
-    "app_elf":            "hello_world.elf",
-    "app_bin":            "hello_world.bin",
+    "app_elf":            "tautek_esp32s3_core.elf",
+    "app_bin":            "tautek_esp32s3_core.bin",
     "build_type":         "flash_app",
     "git_revision":       "v5.1.2-dirty",
     "target":             "esp32s3",
@@ -21,12 +21,12 @@
     "monitor_toolprefix": "xtensa-esp32s3-elf-",
     "c_compiler":         "/home/tux/.espressif/tools/xtensa-esp32s3-elf/esp-12.2.0_20230208/xtensa-esp32s3-elf/bin/xtensa-esp32s3-elf-gcc",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "/home/tux/esp/v5.1.2/esp-idf/components/app_trace/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/bt/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/driver/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/efuse/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp-tls/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_coex/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_common/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_eth/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_event/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_gdbstub/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_http_client/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_http_server/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_https_ota/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_https_server/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_lcd/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_netif/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_partition/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_phy/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_pm/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_psram/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_ringbuf/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_system/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_timer/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_wifi/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/fatfs/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/freertos/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/hal/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/heap/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/ieee802154/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/log/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/lwip/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/mqtt/esp-mqtt/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/newlib/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/nvs_flash/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/openthread/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/protocomm/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/pthread/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/soc/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/spi_flash/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/spiffs/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/tcp_transport/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/ulp/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/unity/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/usb/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/vfs/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/wear_levelling/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/wifi_provisioning/Kconfig",
-        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/tux/esp/v5.1.2/esp-idf/components/bootloader/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/components/esp_rom/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/components/esptool_py/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/components/partition_table/Kconfig.projbuild"
+        "COMPONENT_KCONFIGS" : "/home/tux/esp/v5.1.2/esp-idf/components/app_trace/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/bt/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/driver/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/efuse/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp-tls/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_adc/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_coex/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_common/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_eth/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_event/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_gdbstub/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_http_client/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_http_server/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_https_ota/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_https_server/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_lcd/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_netif/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_partition/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_phy/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_pm/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_psram/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_ringbuf/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_system/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_timer/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/esp_wifi/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/fatfs/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/freertos/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/hal/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/heap/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/ieee802154/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/log/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/lwip/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/mbedtls/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/mqtt/esp-mqtt/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/newlib/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/nvs_flash/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/openthread/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/protocomm/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/pthread/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/soc/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/spi_flash/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/spiffs/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/tcp_transport/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/ulp/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/unity/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/usb/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/vfs/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/wear_levelling/Kconfig;/home/tux/esp/v5.1.2/esp-idf/components/wifi_provisioning/Kconfig;/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/Kconfig;/home/tux/projects/tautuk_esp32s3_core/managed_components/espressif__esp_secure_cert_mgr/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/tux/esp/v5.1.2/esp-idf/components/bootloader/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/components/esp_rom/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/components/esptool_py/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/components/partition_table/Kconfig.projbuild;/home/tux/projects/tautuk_esp32s3_core/main/Kconfig.projbuild;/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "newlib", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "xtensa" ],
-    "build_components" : [ "app_trace", "app_update", "bootloader", "bootloader_support", "bt", "cmock", "console", "cxx", "driver", "efuse", "esp-tls", "esp_adc", "esp_app_format", "esp_coex", "esp_common", "esp_eth", "esp_event", "esp_gdbstub", "esp_hid", "esp_http_client", "esp_http_server", "esp_https_ota", "esp_https_server", "esp_hw_support", "esp_lcd", "esp_local_ctrl", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_system", "esp_timer", "esp_wifi", "espcoredump", "esptool_py", "fatfs", "freertos", "hal", "heap", "http_parser", "idf_test", "ieee802154", "json", "log", "lwip", "main", "mbedtls", "mqtt", "newlib", "nvs_flash", "openthread", "partition_table", "perfmon", "protobuf-c", "protocomm", "pthread", "sdmmc", "soc", "spi_flash", "spiffs", "tcp_transport", "touch_element", "ulp", "unity", "usb", "vfs", "wear_levelling", "wifi_provisioning", "wpa_supplicant", "xtensa", "" ],
-    "build_component_paths" : [ "/home/tux/esp/v5.1.2/esp-idf/components/app_trace", "/home/tux/esp/v5.1.2/esp-idf/components/app_update", "/home/tux/esp/v5.1.2/esp-idf/components/bootloader", "/home/tux/esp/v5.1.2/esp-idf/components/bootloader_support", "/home/tux/esp/v5.1.2/esp-idf/components/bt", "/home/tux/esp/v5.1.2/esp-idf/components/cmock", "/home/tux/esp/v5.1.2/esp-idf/components/console", "/home/tux/esp/v5.1.2/esp-idf/components/cxx", "/home/tux/esp/v5.1.2/esp-idf/components/driver", "/home/tux/esp/v5.1.2/esp-idf/components/efuse", "/home/tux/esp/v5.1.2/esp-idf/components/esp-tls", "/home/tux/esp/v5.1.2/esp-idf/components/esp_adc", "/home/tux/esp/v5.1.2/esp-idf/components/esp_app_format", "/home/tux/esp/v5.1.2/esp-idf/components/esp_coex", "/home/tux/esp/v5.1.2/esp-idf/components/esp_common", "/home/tux/esp/v5.1.2/esp-idf/components/esp_eth", "/home/tux/esp/v5.1.2/esp-idf/components/esp_event", "/home/tux/esp/v5.1.2/esp-idf/components/esp_gdbstub", "/home/tux/esp/v5.1.2/esp-idf/components/esp_hid", "/home/tux/esp/v5.1.2/esp-idf/components/esp_http_client", "/home/tux/esp/v5.1.2/esp-idf/components/esp_http_server", "/home/tux/esp/v5.1.2/esp-idf/components/esp_https_ota", "/home/tux/esp/v5.1.2/esp-idf/components/esp_https_server", "/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support", "/home/tux/esp/v5.1.2/esp-idf/components/esp_lcd", "/home/tux/esp/v5.1.2/esp-idf/components/esp_local_ctrl", "/home/tux/esp/v5.1.2/esp-idf/components/esp_mm", "/home/tux/esp/v5.1.2/esp-idf/components/esp_netif", "/home/tux/esp/v5.1.2/esp-idf/components/esp_netif_stack", "/home/tux/esp/v5.1.2/esp-idf/components/esp_partition", "/home/tux/esp/v5.1.2/esp-idf/components/esp_phy", "/home/tux/esp/v5.1.2/esp-idf/components/esp_pm", "/home/tux/esp/v5.1.2/esp-idf/components/esp_psram", "/home/tux/esp/v5.1.2/esp-idf/components/esp_ringbuf", "/home/tux/esp/v5.1.2/esp-idf/components/esp_rom", "/home/tux/esp/v5.1.2/esp-idf/components/esp_system", "/home/tux/esp/v5.1.2/esp-idf/components/esp_timer", "/home/tux/esp/v5.1.2/esp-idf/components/esp_wifi", "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump", "/home/tux/esp/v5.1.2/esp-idf/components/esptool_py", "/home/tux/esp/v5.1.2/esp-idf/components/fatfs", "/home/tux/esp/v5.1.2/esp-idf/components/freertos", "/home/tux/esp/v5.1.2/esp-idf/components/hal", "/home/tux/esp/v5.1.2/esp-idf/components/heap", "/home/tux/esp/v5.1.2/esp-idf/components/http_parser", "/home/tux/esp/v5.1.2/esp-idf/components/idf_test", "/home/tux/esp/v5.1.2/esp-idf/components/ieee802154", "/home/tux/esp/v5.1.2/esp-idf/components/json", "/home/tux/esp/v5.1.2/esp-idf/components/log", "/home/tux/esp/v5.1.2/esp-idf/components/lwip", "/home/tux/projects/tautuk_esp32s3_core/main", "/home/tux/esp/v5.1.2/esp-idf/components/mbedtls", "/home/tux/esp/v5.1.2/esp-idf/components/mqtt", "/home/tux/esp/v5.1.2/esp-idf/components/newlib", "/home/tux/esp/v5.1.2/esp-idf/components/nvs_flash", "/home/tux/esp/v5.1.2/esp-idf/components/openthread", "/home/tux/esp/v5.1.2/esp-idf/components/partition_table", "/home/tux/esp/v5.1.2/esp-idf/components/perfmon", "/home/tux/esp/v5.1.2/esp-idf/components/protobuf-c", "/home/tux/esp/v5.1.2/esp-idf/components/protocomm", "/home/tux/esp/v5.1.2/esp-idf/components/pthread", "/home/tux/esp/v5.1.2/esp-idf/components/sdmmc", "/home/tux/esp/v5.1.2/esp-idf/components/soc", "/home/tux/esp/v5.1.2/esp-idf/components/spi_flash", "/home/tux/esp/v5.1.2/esp-idf/components/spiffs", "/home/tux/esp/v5.1.2/esp-idf/components/tcp_transport", "/home/tux/esp/v5.1.2/esp-idf/components/touch_element", "/home/tux/esp/v5.1.2/esp-idf/components/ulp", "/home/tux/esp/v5.1.2/esp-idf/components/unity", "/home/tux/esp/v5.1.2/esp-idf/components/usb", "/home/tux/esp/v5.1.2/esp-idf/components/vfs", "/home/tux/esp/v5.1.2/esp-idf/components/wear_levelling", "/home/tux/esp/v5.1.2/esp-idf/components/wifi_provisioning", "/home/tux/esp/v5.1.2/esp-idf/components/wpa_supplicant", "/home/tux/esp/v5.1.2/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_trace", "app_update", "backoffAlgorithm", "bootloader", "bootloader_support", "bt", "cmock", "console", "coreMQTT", "cxx", "driver", "efuse", "esp-tls", "esp_adc", "esp_app_format", "esp_coex", "esp_common", "esp_eth", "esp_event", "esp_gdbstub", "esp_hid", "esp_http_client", "esp_http_server", "esp_https_ota", "esp_https_server", "esp_hw_support", "esp_lcd", "esp_local_ctrl", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_system", "esp_timer", "esp_wifi", "espcoredump", "espressif__esp_secure_cert_mgr", "esptool_py", "fatfs", "freertos", "hal", "heap", "http_parser", "idf_test", "ieee802154", "json", "log", "lwip", "main", "mbedtls", "mqtt", "newlib", "nvs_flash", "openthread", "partition_table", "perfmon", "posix_compat", "protobuf-c", "protocol_examples_common", "protocomm", "pthread", "sdmmc", "soc", "spi_flash", "spiffs", "tcp_transport", "touch_element", "ulp", "unity", "usb", "vfs", "wear_levelling", "wifi_provisioning", "wpa_supplicant", "xtensa", "" ],
+    "build_component_paths" : [ "/home/tux/esp/v5.1.2/esp-idf/components/app_trace", "/home/tux/esp/v5.1.2/esp-idf/components/app_update", "/home/tux/projects/tautuk_esp32s3_core/libraries/backoffAlgorithm", "/home/tux/esp/v5.1.2/esp-idf/components/bootloader", "/home/tux/esp/v5.1.2/esp-idf/components/bootloader_support", "/home/tux/esp/v5.1.2/esp-idf/components/bt", "/home/tux/esp/v5.1.2/esp-idf/components/cmock", "/home/tux/esp/v5.1.2/esp-idf/components/console", "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT", "/home/tux/esp/v5.1.2/esp-idf/components/cxx", "/home/tux/esp/v5.1.2/esp-idf/components/driver", "/home/tux/esp/v5.1.2/esp-idf/components/efuse", "/home/tux/esp/v5.1.2/esp-idf/components/esp-tls", "/home/tux/esp/v5.1.2/esp-idf/components/esp_adc", "/home/tux/esp/v5.1.2/esp-idf/components/esp_app_format", "/home/tux/esp/v5.1.2/esp-idf/components/esp_coex", "/home/tux/esp/v5.1.2/esp-idf/components/esp_common", "/home/tux/esp/v5.1.2/esp-idf/components/esp_eth", "/home/tux/esp/v5.1.2/esp-idf/components/esp_event", "/home/tux/esp/v5.1.2/esp-idf/components/esp_gdbstub", "/home/tux/esp/v5.1.2/esp-idf/components/esp_hid", "/home/tux/esp/v5.1.2/esp-idf/components/esp_http_client", "/home/tux/esp/v5.1.2/esp-idf/components/esp_http_server", "/home/tux/esp/v5.1.2/esp-idf/components/esp_https_ota", "/home/tux/esp/v5.1.2/esp-idf/components/esp_https_server", "/home/tux/esp/v5.1.2/esp-idf/components/esp_hw_support", "/home/tux/esp/v5.1.2/esp-idf/components/esp_lcd", "/home/tux/esp/v5.1.2/esp-idf/components/esp_local_ctrl", "/home/tux/esp/v5.1.2/esp-idf/components/esp_mm", "/home/tux/esp/v5.1.2/esp-idf/components/esp_netif", "/home/tux/esp/v5.1.2/esp-idf/components/esp_netif_stack", "/home/tux/esp/v5.1.2/esp-idf/components/esp_partition", "/home/tux/esp/v5.1.2/esp-idf/components/esp_phy", "/home/tux/esp/v5.1.2/esp-idf/components/esp_pm", "/home/tux/esp/v5.1.2/esp-idf/components/esp_psram", "/home/tux/esp/v5.1.2/esp-idf/components/esp_ringbuf", "/home/tux/esp/v5.1.2/esp-idf/components/esp_rom", "/home/tux/esp/v5.1.2/esp-idf/components/esp_system", "/home/tux/esp/v5.1.2/esp-idf/components/esp_timer", "/home/tux/esp/v5.1.2/esp-idf/components/esp_wifi", "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump", "/home/tux/projects/tautuk_esp32s3_core/managed_components/espressif__esp_secure_cert_mgr", "/home/tux/esp/v5.1.2/esp-idf/components/esptool_py", "/home/tux/esp/v5.1.2/esp-idf/components/fatfs", "/home/tux/esp/v5.1.2/esp-idf/components/freertos", "/home/tux/esp/v5.1.2/esp-idf/components/hal", "/home/tux/esp/v5.1.2/esp-idf/components/heap", "/home/tux/esp/v5.1.2/esp-idf/components/http_parser", "/home/tux/esp/v5.1.2/esp-idf/components/idf_test", "/home/tux/esp/v5.1.2/esp-idf/components/ieee802154", "/home/tux/esp/v5.1.2/esp-idf/components/json", "/home/tux/esp/v5.1.2/esp-idf/components/log", "/home/tux/esp/v5.1.2/esp-idf/components/lwip", "/home/tux/projects/tautuk_esp32s3_core/main", "/home/tux/esp/v5.1.2/esp-idf/components/mbedtls", "/home/tux/esp/v5.1.2/esp-idf/components/mqtt", "/home/tux/esp/v5.1.2/esp-idf/components/newlib", "/home/tux/esp/v5.1.2/esp-idf/components/nvs_flash", "/home/tux/esp/v5.1.2/esp-idf/components/openthread", "/home/tux/esp/v5.1.2/esp-idf/components/partition_table", "/home/tux/esp/v5.1.2/esp-idf/components/perfmon", "/home/tux/projects/tautuk_esp32s3_core/libraries/common/posix_compat", "/home/tux/esp/v5.1.2/esp-idf/components/protobuf-c", "/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common", "/home/tux/esp/v5.1.2/esp-idf/components/protocomm", "/home/tux/esp/v5.1.2/esp-idf/components/pthread", "/home/tux/esp/v5.1.2/esp-idf/components/sdmmc", "/home/tux/esp/v5.1.2/esp-idf/components/soc", "/home/tux/esp/v5.1.2/esp-idf/components/spi_flash", "/home/tux/esp/v5.1.2/esp-idf/components/spiffs", "/home/tux/esp/v5.1.2/esp-idf/components/tcp_transport", "/home/tux/esp/v5.1.2/esp-idf/components/touch_element", "/home/tux/esp/v5.1.2/esp-idf/components/ulp", "/home/tux/esp/v5.1.2/esp-idf/components/unity", "/home/tux/esp/v5.1.2/esp-idf/components/usb", "/home/tux/esp/v5.1.2/esp-idf/components/vfs", "/home/tux/esp/v5.1.2/esp-idf/components/wear_levelling", "/home/tux/esp/v5.1.2/esp-idf/components/wifi_provisioning", "/home/tux/esp/v5.1.2/esp-idf/components/wpa_supplicant", "/home/tux/esp/v5.1.2/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_trace": {
             "alias": "idf::app_trace",
@@ -57,6 +57,21 @@
             "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/app_update/libapp_update.a",
             "sources": [ "/home/tux/esp/v5.1.2/esp-idf/components/app_update/esp_ota_ops.c", "/home/tux/esp/v5.1.2/esp-idf/components/app_update/esp_ota_app_desc.c" ],
             "include_dirs": [ "include" ]
+        },
+        "backoffAlgorithm": {
+            "alias": "idf::backoffAlgorithm",
+            "target": "___idf_backoffAlgorithm",
+            "prefix": "idf",
+            "dir": "/home/tux/projects/tautuk_esp32s3_core/libraries/backoffAlgorithm",
+            "type": "LIBRARY",
+            "lib": "__idf_backoffAlgorithm",
+            "reqs": [],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/backoffAlgorithm/libbackoffAlgorithm.a",
+            "sources": [ "/home/tux/projects/tautuk_esp32s3_core/libraries/backoffAlgorithm/backoffAlgorithm/source/backoff_algorithm.c" ],
+            "include_dirs": [ "/home/tux/projects/tautuk_esp32s3_core/libraries/backoffAlgorithm/backoffAlgorithm/source/include" ]
         },
         "bootloader": {
             "alias": "idf::bootloader",
@@ -132,6 +147,21 @@
             "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/console/libconsole.a",
             "sources": [ "/home/tux/esp/v5.1.2/esp-idf/components/console/commands.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/esp_console_repl.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/split_argv.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/linenoise/linenoise.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_cmd.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_date.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_dbl.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_dstr.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_end.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_file.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_hashtable.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_int.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_lit.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_rem.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_rex.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_str.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/arg_utils.c", "/home/tux/esp/v5.1.2/esp-idf/components/console/argtable3/argtable3.c" ],
             "include_dirs": [ "." ]
+        },
+        "coreMQTT": {
+            "alias": "idf::coreMQTT",
+            "target": "___idf_coreMQTT",
+            "prefix": "idf",
+            "dir": "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT",
+            "type": "LIBRARY",
+            "lib": "__idf_coreMQTT",
+            "reqs": [ "esp-tls" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/coreMQTT/libcoreMQTT.a",
+            "sources": [ "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/core_mqtt.c", "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/core_mqtt_state.c", "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/core_mqtt_serializer.c", "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/port/network_transport/network_transport.c" ],
+            "include_dirs": [ "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/include", "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/coreMQTT/source/interface", "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/config", "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/../common/logging/", "/home/tux/projects/tautuk_esp32s3_core/libraries/coreMQTT/port/network_transport" ]
         },
         "cxx": {
             "alias": "idf::cxx",
@@ -613,6 +643,21 @@
             "sources": [ "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/src/core_dump_common.c", "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/src/core_dump_checksum.c", "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/src/core_dump_flash.c", "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/src/core_dump_uart.c", "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/src/core_dump_elf.c", "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/src/core_dump_binary.c", "/home/tux/esp/v5.1.2/esp-idf/components/espcoredump/src/port/xtensa/core_dump_port.c" ],
             "include_dirs": [ "include", "include/port/xtensa" ]
         },
+        "espressif__esp_secure_cert_mgr": {
+            "alias": "idf::espressif__esp_secure_cert_mgr",
+            "target": "___idf_espressif__esp_secure_cert_mgr",
+            "prefix": "idf",
+            "dir": "/home/tux/projects/tautuk_esp32s3_core/managed_components/espressif__esp_secure_cert_mgr",
+            "type": "LIBRARY",
+            "lib": "__idf_espressif__esp_secure_cert_mgr",
+            "reqs": [ "spi_flash", "mbedtls", "nvs_flash", "efuse" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/espressif__esp_secure_cert_mgr/libespressif__esp_secure_cert_mgr.a",
+            "sources": [ "/home/tux/projects/tautuk_esp32s3_core/managed_components/espressif__esp_secure_cert_mgr/srcs/esp_secure_cert_tlv_read.c", "/home/tux/projects/tautuk_esp32s3_core/managed_components/espressif__esp_secure_cert_mgr/srcs/esp_secure_cert_crypto.c" ],
+            "include_dirs": [ "include" ]
+        },
         "esptool_py": {
             "alias": "idf::esptool_py",
             "target": "___idf_esptool_py",
@@ -786,12 +831,12 @@
             "type": "LIBRARY",
             "lib": "__idf_main",
             "reqs": [],
-            "priv_reqs": [],
+            "priv_reqs": [ "espressif__esp_secure_cert_mgr" ],
             "managed_reqs": [],
-            "managed_priv_reqs": [],
+            "managed_priv_reqs": [ "espressif__esp_secure_cert_mgr" ],
             "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/tux/projects/tautuk_esp32s3_core/main/main.c", "/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.c" ],
-            "include_dirs": []
+            "sources": [ "/home/tux/projects/tautuk_esp32s3_core/main/app_main.c", "/home/tux/projects/tautuk_esp32s3_core/main/MQLibrary.c", "/home/tux/projects/tautuk_esp32s3_core/main/aws_iot_mqtt.c" ],
+            "include_dirs": [ ".", "/home/tux/projects/tautuk_esp32s3_core/main" ]
         },
         "mbedtls": {
             "alias": "idf::mbedtls",
@@ -898,6 +943,21 @@
             "sources": [ "/home/tux/esp/v5.1.2/esp-idf/components/perfmon/xtensa_perfmon_access.c", "/home/tux/esp/v5.1.2/esp-idf/components/perfmon/xtensa_perfmon_apis.c", "/home/tux/esp/v5.1.2/esp-idf/components/perfmon/xtensa_perfmon_masks.c" ],
             "include_dirs": [ "include" ]
         },
+        "posix_compat": {
+            "alias": "idf::posix_compat",
+            "target": "___idf_posix_compat",
+            "prefix": "idf",
+            "dir": "/home/tux/projects/tautuk_esp32s3_core/libraries/common/posix_compat",
+            "type": "LIBRARY",
+            "lib": "__idf_posix_compat",
+            "reqs": [ "esp_timer" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/posix_compat/libposix_compat.a",
+            "sources": [ "/home/tux/projects/tautuk_esp32s3_core/libraries/common/posix_compat/clock_esp.c", "/home/tux/projects/tautuk_esp32s3_core/libraries/common/posix_compat/semaphore.c" ],
+            "include_dirs": [ "." ]
+        },
         "protobuf-c": {
             "alias": "idf::protobuf-c",
             "target": "___idf_protobuf-c",
@@ -912,6 +972,21 @@
             "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/protobuf-c/libprotobuf-c.a",
             "sources": [ "/home/tux/esp/v5.1.2/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" ],
             "include_dirs": [ "protobuf-c" ]
+        },
+        "protocol_examples_common": {
+            "alias": "idf::protocol_examples_common",
+            "target": "___idf_protocol_examples_common",
+            "prefix": "idf",
+            "dir": "/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common",
+            "type": "LIBRARY",
+            "lib": "__idf_protocol_examples_common",
+            "reqs": [],
+            "priv_reqs": [ "esp_netif", "driver", "esp_wifi", "vfs" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "/home/tux/projects/tautuk_esp32s3_core/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a",
+            "sources": [ "/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/stdin_out.c", "/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/addr_from_stdin.c", "/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/connect.c", "/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c", "/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/protocol_examples_utils.c", "/home/tux/esp/v5.1.2/esp-idf/examples/common_components/protocol_examples_common/console_cmd.c" ],
+            "include_dirs": [ "include" ]
         },
         "protocomm": {
             "alias": "idf::protocomm",

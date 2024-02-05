@@ -118,6 +118,7 @@ static void app_adc_calibration_deinit(adc_cali_handle_t handle)
 void getVoltage(void)
 {
     int adc_voltage = 0;
+    
     voltage = 0;
 
     ESP_ERROR_CHECK(adc_oneshot_read(adc1_handle, ADC1_CHAN0, &adc_raw));

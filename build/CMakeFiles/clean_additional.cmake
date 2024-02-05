@@ -6,6 +6,8 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   "bootloader/bootloader.bin"
   "bootloader/bootloader.elf"
   "bootloader/bootloader.map"
+  "client.crt.S"
+  "client.key.S"
   "config/sdkconfig.cmake"
   "config/sdkconfig.h"
   "esp-idf/esptool_py/flasher_args.json.in"
@@ -14,11 +16,12 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   "flash_bootloader_args"
   "flash_project_args"
   "flasher_args.json"
-  "hello_world.bin"
-  "hello_world.map"
   "ldgen_libraries"
   "ldgen_libraries.in"
   "project_elf_src_esp32s3.c"
+  "root_cert_auth.crt.S"
+  "tautek_esp32s3_core.bin"
+  "tautek_esp32s3_core.map"
   "x509_crt_bundle.S"
   )
 endif()
