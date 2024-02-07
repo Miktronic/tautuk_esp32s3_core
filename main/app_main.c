@@ -39,6 +39,7 @@ static const char *TAG = "TauTuk";
 
 #define R1                      10
 #define R2                      10
+#define RL                      10
 
 #define PACKET_SEND_FREQUENCY       120000
 #define GAS_DELAY                   5000
@@ -180,7 +181,7 @@ void mq_sensor_task(void *pvPara)
     setR1(R1);
     setR2(R2);
     //RL should be configurated after setting R1 and R2
-    setRL(10);
+    setRL(RL);
 
 /*****************************  MQ CAlibration ********************************************/ 
 // Explanation: 

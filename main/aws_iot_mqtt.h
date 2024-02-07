@@ -329,7 +329,7 @@ extern const char root_cert_auth_end[]   asm("_binary_root_cert_auth_crt_end");
 /**
  * @brief Delay in seconds between two iterations of subscribePublishLoop().
  */
-#define MQTT_SUBPUB_LOOP_DELAY_SECONDS      ( 3U )
+#define MQTT_SUBPUB_LOOP_DELAY_SECONDS      ( 1U )
 
 /**
  * @brief Transport timeout in milliseconds for transport send and receive.
