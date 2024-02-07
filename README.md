@@ -24,5 +24,11 @@ You can see images on the screenshot folder and refer to the screenshots to buil
     #define R2                      10 <br>
     #define RL                      10 <br>
 
+### Building the project
+
+NOTE: You can refer to the screenshot in the screenshots folder.
+
+After adding the project into the VScode, you can set the COM port and Target Model. In the "Command bar", you can find the buttons for COM port, Target Device, Clean, Build, Flash, and Monitor buttons. After setting the port and target device(ESP32S3), you can build, Flash and Monitor the firmware
+
 
 
