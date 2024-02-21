@@ -22,10 +22,12 @@
 #include "sdkconfig.h"
 #include "esp_log.h"
 #include "cJSON.h"
+
+#include "app_ble.h"
 #include "MQLibrary.h"
 #include "aws_iot_mqtt.h"
 
-static const char *TAG = "TauTuk";
+const char *TAG = "TauTuk";
 
 /* Use project configuration menu (idf.py menuconfig) to choose the GPIO to blink,
    or you can edit the following line and set a number here.
@@ -56,8 +58,37 @@ float Aceton    = 0.0;
 
 static uint8_t s_led_state = 0;
 
-char id[10] = "#tt0000001";
+char id[10] = "#TT0000001";
 char mqtt_payload[256] = "";
+
+char ESP_WIFI_SSID[32] = "518";
+char ESP_WIFI_PASS[64] =  "caiyuangungun";
+char device_id[16];
+char client_cert[] = "-----BEGIN CERTIFICATE-----\nMIIDdzCCAl+gAwIBAgIUe3gOF+eVuVZC9kooCkWWB3ZcRE8wDQYJKoZIhvcNAQEL\nBQAwfjELMAkGA1UEBhMCVVMxEzARBgNVBAgMCldhc2hpbmd0b24xEDAOBgNVBAcM\nB1NlYXR0bGUxGDAWBgNVBAoMD0FtYXpvbi5jb20gSW5jLjEgMB4GA1UECwwXQW1h\nem9uIElvVCBQcm92aXNpb25pbmcxDDAKBgNVBAUTAzEuMDAeFw0yNDAyMjAxNTE0\nNDFaFw0yNDAyMjAxNTIxNDFaMEsxSTBHBgNVBAMMQDBlOWU1MDRiZTc0Mzc1MGVi\nMThhMTM5ZGM5ZThlMDMzYTQ2ZDIxZTBhNDkzMTM2MjRhMzdiOWM5NzA3NDBhOTIw\nggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC+Y1orfgKSn2M7+iUcVQu5\nJj7iwK4A3Wgwm2qqxP3miryXNar2C5bF9i+pWxxJ8ejo5QdLa3RBJZvcpBvt4EEM\nvcIi5ZNQVqZ4cmXq2ZVz+Z4GfQBIDalzkpKJG5p/b66ezMf9o/83FOInWLEKgTnK\nZoenEV/mxZG0z7XrAKvNGpfxGRtCt97NmuBRUErUcpl/gZk0lYRt6aPAX4o9vYKY\nNBQc+zDoJ2wfbDEs3trteX3BbQ/DgPbBwtFlDeYiJK8YrhZRoiuyI7Zaaj3wEq7O\nU1gEIh1vCEkcqqsdKwgFVXrwBNFNU2ou/zlZs92JARkvHGSs9oZ752IoNKQKBked\nAgMBAAGjIDAeMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgeAMA0GCSqGSIb3\nDQEBCwUAA4IBAQC7UnJe1pIWXhAOn+JjkGv8aX+FW4pMVIrl6esnDH3/aqky4FgS\nuFUHDm7BGqyt5m/1sjoKruP41dn+RIHyVEgNHvR+7NBDWu4Ej1kqwNpbLoSR+WdO\nHgur9NdzBFZ4k8ILh4Ecx4fmwDIxX/eNOjB90Nj5QCjyU4lBt5CvjOECS1MWkF+5\nUb1XTGSW75JWAUkjw2nOEaTekP3ptUnXPLNuLf6DiWyajkyQweJokTDtK5HDQ9a4\nyiLFIxeLcNYcdFdNpP23gyzrdAF0vwyAJyDXBXQ7wIN5mGPzA2Q+U93O8DdQz3aB\nI4ky8ak+HBjCNZsXTlcp2/xZFWLrOAPASeAc\n-----END CERTIFICATE-----\n";
+
+char client_key[] = "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEAvmNaK34Ckp9jO/olHFULuSY+4sCuAN1oMJtqqsT95oq8lzWq\n9guWxfYvqVscSfHo6OUHS2t0QSWb3KQb7eBBDL3CIuWTUFameHJl6tmVc/meBn0A\nSA2pc5KSiRuaf2+unszH/aP/NxTiJ1ixCoE5ymaHpxFf5sWRtM+16wCrzRqX8Rkb\nQrfezZrgUVBK1HKZf4GZNJWEbemjwF+KPb2CmDQUHPsw6CdsH2wxLN7a7Xl9wW0P\nw4D2wcLRZQ3mIiSvGK4WUaIrsiO2Wmo98BKuzlNYBCIdbwhJHKqrHSsIBVV68ATR\nTVNqLv85WbPdiQEZLxxkrPaGe+diKDSkCgZHnQIDAQABAoIBAFO+adw1mjYaS9EG\n76ntsrFnJEQjUqZovTqcMigZbEErB1dPsPp3EIPVDRPmUqQn9zXx/+ppwoIhY9SC\njxJsENDk6u7koo60/pZ+Y1wRBw8zXhImi6gl8kI216Pdc3DYlCufkdx8dXcqBWwf\nNAiV3PCtdr/DAbcFcljhAHj1G5ykcazxOmdH2uQj4Pc0q3jR5BFLNgWyp08LI4v5\n1BMm3tR/sA7/U4kYSqrusvh9TT2ZcllaZftSPREw+5A8mtYsr53Z4PVeoJkPwTHE\nRQyp+Ingq0UGk4F2jGVT1gh3fUlMBAYhfsF5dtBJz57XlezQox9nWxTrciCb1o1Y\nVDa6RLUCgYEA9NT+fO7QVJD/qr4HRnH7Bqy1CwpkekdOMvkTsMK34R+1k7l4ocft\n4M8XfVrxn7Thd4I1520wl+Q6tIUtiWTSMNPhjxI0+qch4lL89kbHkxDcSGyi/Kj+\nykBS52Uz1R4U9SO6Ju36mA814RTzbGUzK7G9g9ktBY58zYwCNla/9LsCgYEAxxKY\nAASwAh/YHHplcBMrWAF9lih7AXxvEWi7k1C9+4ZzJa94jgno0m1nDzVOgKZy/i9m\nw2c2MjOBBPdR0dcyEDLCE9xCzhAgyuCdXGXjxbcmLy7CtpjjSKMYvq4+4ouFoyEU\nI844BbarrPcv4t6jOLwAQGN6lOY5L3V6kbptm4cCgYAgnvB5fOhNHDS0bzVQ8Ybc\n0M4edngEwtNsfztcZdVSLYNn92JXS+gp9+3NSfy/pr4TykmcWDQNSN95hfUXRVOs\nJc773RUqAHLHUP9bYPreYXS4QaFFwM6R7BgftKA/WQ65ytTWswaclAo9vyjf3GwA\n+mGh26HgB6ghSvJQgyZ4WQKBgQCgGckbAqoXG0swJBOenhwWzCQXdnjuygd9ZdCt\neptARXIn1cZL3ZZcXdYrugBnoPYMjUzFTCWfHCLgPpOUAtDljBzf4h3sIbZt01Vb\nMSqNIW3ZNm8scSshiOHmwLYcdn9Eod7TqQ8PMUlCcw4VFF8KytAc+KRmSf2luIKZ\n3ug10wKBgDQ9GITZraKmBQKwMh6SWBLujr20h4VZk6oOC06lRCoDK6K/aXZUiPVq\nY8de9iYZ8g5ScnYEiiychobisd664AHBLBDtmm5G7mZ2dcTUP68hA2OgkUcFVVOf\nlyPUhxcVCKiA9PPWtSSHJx62FCWq86Ax5NO04hyUSa+KjNnLISOx\n-----END RSA PRIVATE KEY-----\n";
+
+char root_cert[] = "-----BEGIN CERTIFICATE-----\n\
+MIIDQTCCAimgAwIBAgITBmyfz5m/jAo54vB4ikPmljZbyjANBgkqhkiG9w0BAQsF\n\
+ADA5MQswCQYDVQQGEwJVUzEPMA0GA1UEChMGQW1hem9uMRkwFwYDVQQDExBBbWF6\n\
+b24gUm9vdCBDQSAxMB4XDTE1MDUyNjAwMDAwMFoXDTM4MDExNzAwMDAwMFowOTEL\n\
+MAkGA1UEBhMCVVMxDzANBgNVBAoTBkFtYXpvbjEZMBcGA1UEAxMQQW1hem9uIFJv\n\
+b3QgQ0EgMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALJ4gHHKeNXj\n\
+ca9HgFB0fW7Y14h29Jlo91ghYPl0hAEvrAIthtOgQ3pOsqTQNroBvo3bSMgHFzZM\n\
+9O6II8c+6zf1tRn4SWiw3te5djgdYZ6k/oI2peVKVuRF4fn9tBb6dNqcmzU5L/qw\n\
+IFAGbHrQgLKm+a/sRxmPUDgH3KKHOVj4utWp+UhnMJbulHheb4mjUcAwhmahRWa6\n\
+VOujw5H5SNz/0egwLX0tdHA114gk957EWW67c4cX8jJGKLhD+rcdqsq08p8kDi1L\n\
+93FcXmn/6pUCyziKrlA4b9v7LWIbxcceVOF34GfID5yHI9Y/QCB/IIDEgEw+OyQm\n\
+jgSubJrIqg0CAwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMC\n\
+AYYwHQYDVR0OBBYEFIQYzIU07LwMlJQuCFmcx7IQTgoIMA0GCSqGSIb3DQEBCwUA\n\
+A4IBAQCY8jdaQZChGsV2USggNiMOruYou6r4lK5IpDB/G/wkjUu0yKGX9rbxenDI\n\
+U5PMCCjjmCXPI6T53iHTfIUJrU6adTrCC2qJeHZERxhlbI1Bjjt/msv0tadQ1wUs\n\
+N+gDS63pYaACbvXy8MWy7Vu33PqUXHeeE6V/Uq2V8viTO96LXFvKWlJbYK8U90vv\n\
+o/ufQJVtMVT8QtPHRh8jrdkPSHCa2XV4cdFyQzR1bldZwgJcJmApzyMZFo6IQ6XU\n\
+5MsI+yMRQ+hDKXJioaldXgjUkK642M4UwtBV8ob2xJNDd2ZhwLnoQdeXeGADbkpy\n\
+rqXRfboQnoZsG4q5WTP468SQvvG5\n\
+-----END CERTIFICATE-----\n";
+
 /*********************** Function Declaration ********************/
 static void blink_led(void);
 static void configure_led(void);
@@ -243,18 +274,20 @@ void app_main(void)
         ESP_ERROR_CHECK(nvs_flash_init());
     }
     
-    ESP_ERROR_CHECK(esp_netif_init());
-    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    provisioning_fn(); 
+
+    //ESP_ERROR_CHECK(esp_netif_init());
+    //ESP_ERROR_CHECK(esp_event_loop_create_default());
 
     /* This helper function configures Wi-Fi or Ethernet, as selected in menuconfig.
      * Read "Establishing Wi-Fi or Ethernet Connection" section in
      * examples/protocols/README.md for more information about this function.
      */
-    ESP_ERROR_CHECK(example_connect());
+    //ESP_ERROR_CHECK(example_connect());
 
     /* Configure the peripheral according to the LED type */
     configure_led();
 
     xTaskCreate(&aws_iot_demo_main, "aws_iot_mqtt", 4096, NULL, 0, NULL);
-    xTaskCreate(&mq_sensor_task, "mq_sensor_task", 4096, NULL, 0, NULL);
+    //xTaskCreate(&mq_sensor_task, "mq_sensor_task", 4096, NULL, 0, NULL);
 }

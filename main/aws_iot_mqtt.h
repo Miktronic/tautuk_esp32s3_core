@@ -59,9 +59,10 @@
 
 /* POSIX includes. */
 #include <unistd.h>
-#ifndef AWS_IOT_ENDPOINT
-    #define AWS_IOT_ENDPOINT    CONFIG_MQTT_BROKER_ENDPOINT
-#endif
+
+#define AWS_IOT_ENDPOINT    "a1rbcit24wsv6t-ats.iot.us-east-1.amazonaws.com"
+#define AWS_MQTT_PORT    8883
+
 
 /**
  * @brief AWS IoT MQTT broker port number.
@@ -71,9 +72,6 @@
  * @note Port 443 requires use of the ALPN TLS extension with the ALPN protocol
  * name. When using port 8883, ALPN is not required.
  */
-#ifndef AWS_MQTT_PORT
-    #define AWS_MQTT_PORT    ( CONFIG_MQTT_BROKER_PORT )
-#endif
 
 /**
  * @brief The username value for authenticating client to MQTT broker when
@@ -152,6 +150,15 @@
 #include "core_mqtt.h"
 #define MQTT_LIB    "core-mqtt@" MQTT_LIBRARY_VERSION
 
+/* Standard includes. */
+#include <assert.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+/* POSIX includes. */
+#include <unistd.h>
+
 /* MQTT API headers. */
 #include "core_mqtt.h"
 #include "core_mqtt_state.h"
@@ -192,16 +199,16 @@
  *!!! convenience of demonstration only.  Production devices should
  *!!! store keys securely, such as within a secure element.
  */
-    #ifndef CONFIG_EXAMPLE_USE_ESP_SECURE_CERT_MGR
-        extern const char client_cert_start[] asm("_binary_client_crt_start");
-        extern const char client_cert_end[] asm("_binary_client_crt_end");
-        extern const char client_key_start[] asm("_binary_client_key_start");
-        extern const char client_key_end[] asm("_binary_client_key_end");
-    #endif /* CONFIG_EXAMPLE_USE_ESP_SECURE_CERT_MGR */
+    //#ifndef CONFIG_EXAMPLE_USE_ESP_SECURE_CERT_MGR
+    //    extern const char client_cert_start[];
+    //    extern const char client_cert_end[];
+    //    extern const char client_key_start[];
+    //    extern const char client_key_end[];
+    //#endif /* CONFIG_EXAMPLE_USE_ESP_SECURE_CERT_MGR */
 #endif /* CLIENT_USERNAME */
 
-extern const char root_cert_auth_start[]   asm("_binary_root_cert_auth_crt_start");
-extern const char root_cert_auth_end[]   asm("_binary_root_cert_auth_crt_end");
+//extern const char root_cert_auth_start[]   asm("_binary_root_cert_auth_crt_start");
+//extern const char root_cert_auth_end[]   asm("_binary_root_cert_auth_crt_end");
 
 /**
  * These configuration settings are required to run the mutual auth demo.
@@ -271,22 +278,23 @@ extern const char root_cert_auth_end[]   asm("_binary_root_cert_auth_crt_end");
  * The topic name starts with the client identifier to ensure that each demo
  * interacts with a unique topic name.
  */
-#define MQTT_EXAMPLE_TOPIC                  CLIENT_IDENTIFIER "/events"
+//#define MQTT_PUBLISH_TOPIC                      "tautuk/test/pub"
+//#define MQTT_SUBSCRIBE_TOPIC                    "tautuk/test/sub"
 
 /**
  * @brief Length of client MQTT topic.
  */
-#define MQTT_EXAMPLE_TOPIC_LENGTH           ( ( uint16_t ) ( sizeof( MQTT_EXAMPLE_TOPIC ) - 1 ) )
-
+#define MQTT_PUBLISH_TOPIC_LENGTH           ( ( uint16_t ) ( sizeof( MQTT_PUBLISH_TOPIC ) - 1 ) )
+#define MQTT_SUBSCRIBE_TOPIC_LENGTH           ( ( uint16_t ) ( sizeof( MQTT_SUBSCRIBE_TOPIC ) - 1 ) )
 /**
  * @brief The MQTT message published in this example.
  */
-#define MQTT_EXAMPLE_MESSAGE                "Welcome to TauTuk"
+#define MQTT_EXAMPLE_MESSAGE                "Hello World!"
 
 /**
  * @brief The length of the MQTT message published in this example.
  */
-#define MQTT_EXAMPLE_MESSAGE_LENGTH         256
+#define MQTT_EXAMPLE_MESSAGE_LENGTH         ( ( uint16_t ) ( sizeof( MQTT_EXAMPLE_MESSAGE ) - 1 ) )
 
 /**
  * @brief Maximum number of outgoing publishes maintained in the application
@@ -303,7 +311,7 @@ extern const char root_cert_auth_end[]   asm("_binary_root_cert_auth_crt_end");
 /**
  * @brief Timeout for MQTT_ProcessLoop function in milliseconds.
  */
-#define MQTT_PROCESS_LOOP_TIMEOUT_MS        ( 2000U )
+#define MQTT_PROCESS_LOOP_TIMEOUT_MS        ( 5000U )
 
 /**
  * @brief The maximum time interval in seconds which is allowed to elapse
@@ -324,12 +332,12 @@ extern const char root_cert_auth_end[]   asm("_binary_root_cert_auth_crt_end");
 /**
  * @brief Number of PUBLISH messages sent per iteration.
  */
-#define MQTT_PUBLISH_COUNT_PER_LOOP         ( 1U )
+#define MQTT_PUBLISH_COUNT_PER_LOOP         ( 5U )
 
 /**
  * @brief Delay in seconds between two iterations of subscribePublishLoop().
  */
-#define MQTT_SUBPUB_LOOP_DELAY_SECONDS      ( 1U )
+#define MQTT_SUBPUB_LOOP_DELAY_SECONDS      ( 5U )
 
 /**
  * @brief Transport timeout in milliseconds for transport send and receive.
@@ -459,6 +467,10 @@ static MQTTPubAckInfo_t pIncomingPublishRecords[ INCOMING_PUBLISH_RECORD_LEN ];
  */
 static StaticSemaphore_t xTlsContextSemaphoreBuffer;
 
+/*-----------------------------------------------------------*/
+
+int aws_iot_demo_main( int argc, char ** argv );
+
 /**
  * @brief The random number generator to use for exponential backoff with
  * jitter retry logic.
@@ -499,6 +511,18 @@ static int connectToServerWithBackoffRetries( NetworkContext_t * pNetworkContext
  * @return EXIT_FAILURE on failure; EXIT_SUCCESS on success.
  */
 static int subscribePublishLoop( MQTTContext_t * pMqttContext );
+
+/**
+ * @brief A function that uses the passed MQTT connection to
+ * subscribe to a topic, publish to the same topic
+ * MQTT_PUBLISH_COUNT_PER_LOOP number of times, and verify if it
+ * receives the Publish message back.
+ *
+ * @param[in] pMqttContext MQTT context pointer.
+ *
+ * @return EXIT_FAILURE on failure; EXIT_SUCCESS on success.
+ */
+static int publishSubscribeLoop( MQTTContext_t * pMqttContext );
 
 /**
  * @brief The function to handle the incoming publishes.
@@ -569,7 +593,7 @@ static int disconnectMqttSession( MQTTContext_t * pMqttContext );
  * @return EXIT_SUCCESS if SUBSCRIBE was successfully sent;
  * EXIT_FAILURE otherwise.
  */
-static int subscribeToTopic( MQTTContext_t * pMqttContext );
+static int subscribeToTopic( MQTTContext_t * pMqttContext, const char* subscribe_topic, uint16_t subscribe_topic_len );
 
 /**
  * @brief Sends an MQTT UNSUBSCRIBE to unsubscribe from
@@ -580,7 +604,7 @@ static int subscribeToTopic( MQTTContext_t * pMqttContext );
  * @return EXIT_SUCCESS if UNSUBSCRIBE was successfully sent;
  * EXIT_FAILURE otherwise.
  */
-static int unsubscribeFromTopic( MQTTContext_t * pMqttContext );
+static int unsubscribeFromTopic( MQTTContext_t * pMqttContext, const char* subscribe_topic, uint16_t subscribe_topic_len  );
 
 /**
  * @brief Sends an MQTT PUBLISH to #MQTT_EXAMPLE_TOPIC defined at
@@ -591,7 +615,7 @@ static int unsubscribeFromTopic( MQTTContext_t * pMqttContext );
  * @return EXIT_SUCCESS if PUBLISH was successfully sent;
  * EXIT_FAILURE otherwise.
  */
-static int publishToTopic( MQTTContext_t * pMqttContext );
+static int publishToTopic( MQTTContext_t * pMqttContext, const char* publish_topic, uint16_t publish_topic_len);
 
 /**
  * @brief Function to get the free index at which an outgoing publish
@@ -682,8 +706,4 @@ static int waitForPacketAck( MQTTContext_t * pMqttContext,
 static MQTTStatus_t processLoopWithTimeout( MQTTContext_t * pMqttContext,
                                             uint32_t ulTimeoutMs );
 
-static void cleanupESPSecureMgrCerts( NetworkContext_t * pNetworkContext );
-
-int aws_iot_demo_main( int argc, char ** argv );
-                                            
-#endif /* ifndef AWS_IOT_MQTT_H_ */
+#endif
